@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | New Wings Technology – Avadi, Chennai</title>
+  <meta name="description" content="Get in touch with New Wings Technology in Avadi, Chennai. Enquire about IT courses, internships, or placement support. Call 09384818257."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.newwingstechnology.com/contact.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root { --blue:#1a9de8; --blue-dark:#0a7ec0; --yellow:#f5c500; --yellow-dark:#d4a800; --text:#1a1a2e; --text-muted:#6b7280; --bg-light:#f8faff; --white:#ffffff; --border:#e5e7eb; --shadow:0 4px 24px rgba(0,0,0,0.07); --shadow-lg:0 12px 48px rgba(0,0,0,0.13); --radius:18px; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--white); overflow-x:hidden; }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; display:block; }
+    ul { list-style:none; }
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    .highlight { color:var(--blue); }
+    .section-badge { display:inline-block; font-size:.72rem; font-weight:600; letter-spacing:2px; color:var(--blue); border:1.5px solid var(--blue); border-radius:100px; padding:4px 16px; margin-bottom:16px; text-transform:uppercase; }
+    .section-title { font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:800; line-height:1.25; color:var(--text); margin-bottom:16px; }
+
+    /* ── NAVBAR ── */
+    .navbar { position:fixed; top:0; left:0; right:0; background:rgba(255,255,255,0.97); backdrop-filter:blur(12px); border-bottom:1px solid rgba(229,231,235,0.8); z-index:1000; transition:box-shadow .3s; }
+    .navbar.scrolled { box-shadow:var(--shadow); }
+    .nav-container { max-width:1300px; margin:0 auto; padding:0 32px; height:108px; display:flex; align-items:center; gap:40px; }
+    .nav-logo { display:flex; align-items:center; background:#fff; padding:4px 14px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.13); }
+    .logo-img { height:95px; width:auto; object-fit:contain; filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15)); }
+    .nav-links { display:flex; align-items:center; gap:36px; margin-left:auto; }
+    .nav-link { font-size:.91rem; font-weight:500; color:var(--text-muted); transition:color .2s; position:relative; }
+    .nav-link::after { content:''; position:absolute; bottom:-4px; left:0; right:0; height:2px; background:var(--blue); transform:scaleX(0); transition:transform .2s; }
+    .nav-link:hover,.nav-link.active { color:var(--blue); }
+    .nav-link:hover::after,.nav-link.active::after { transform:scaleX(1); }
+    .btn-portal { display:flex; align-items:center; gap:8px; background:var(--yellow); color:var(--text); font-size:.9rem; font-weight:700; padding:11px 22px; border-radius:8px; white-space:nowrap; transition:background .2s,transform .2s; }
+    .btn-portal:hover { background:var(--yellow-dark); transform:translateY(-1px); }
+    .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; margin-left:auto; }
+    .hamburger span { display:block; width:24px; height:2px; background:var(--text); border-radius:2px; }
+
+    /* ── PAGE HERO ── */
+    .page-hero { padding:148px 24px 72px; background:linear-gradient(135deg,#0f1e3d 0%,#1a9de8 100%); text-align:center; position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; top:-80px; left:50%; transform:translateX(-50%); width:700px; height:350px; background:radial-gradient(ellipse,rgba(255,255,255,0.07) 0%,transparent 70%); pointer-events:none; }
+    .page-hero h1 { font-size:clamp(2rem,4vw,3rem); font-weight:800; color:#fff; margin-bottom:12px; position:relative; }
+    .page-hero .breadcrumb { font-size:.88rem; color:rgba(255,255,255,0.7); position:relative; }
+    .page-hero .breadcrumb a { color:var(--yellow); }
+
+    /* ── CONTACT SECTION ── */
+    .contact-section { padding:96px 0; background:var(--bg-light); }
+    .contact-grid { display:grid; grid-template-columns:1fr 1.5fr; gap:64px; align-items:start; }
+
+    /* Info panel */
+    .contact-info { display:flex; flex-direction:column; gap:28px; }
+    .info-card { background:var(--white); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); display:flex; gap:20px; align-items:flex-start; transition:transform .3s,box-shadow .3s; }
+    .info-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+    .info-icon { width:52px; height:52px; border-radius:12px; background:linear-gradient(135deg,var(--blue),var(--blue-dark)); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .info-icon i { color:#fff; font-size:1.1rem; }
+    .info-text h4 { font-size:.95rem; font-weight:700; color:var(--text); margin-bottom:6px; }
+    .info-text p,.info-text a { font-size:.875rem; color:var(--text-muted); line-height:1.6; }
+    .info-text a:hover { color:var(--blue); }
+    .landmark-note { font-size:.8rem; color:var(--yellow-dark); font-style:italic; margin-top:4px; }
+
+    .hours-card { background:linear-gradient(135deg,#0f1e3d 0%,#0a7ec0 100%); border-radius:var(--radius); padding:28px; }
+    .hours-card h4 { font-size:1rem; font-weight:700; color:var(--yellow); margin-bottom:16px; }
+    .hours-row { display:flex; justify-content:space-between; font-size:.875rem; padding:8px 0; border-bottom:1px solid rgba(255,255,255,.1); }
+    .hours-row:last-child { border-bottom:none; }
+    .hours-row span:first-child { color:rgba(255,255,255,.7); }
+    .hours-row span:last-child { color:#fff; font-weight:600; }
+
+    /* Form panel */
+    .contact-form-wrap { background:var(--white); border-radius:var(--radius); padding:48px 40px; box-shadow:var(--shadow-lg); }
+    .form-header { margin-bottom:32px; }
+    .form-header h3 { font-size:1.6rem; font-weight:800; margin-bottom:8px; }
+    .form-header p { font-size:.9rem; color:var(--text-muted); }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .form-group { display:flex; flex-direction:column; gap:8px; margin-bottom:20px; }
+    .form-group label { font-size:.85rem; font-weight:600; color:var(--text); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea { font-family:'Poppins',sans-serif; font-size:.9rem; color:var(--text); background:var(--bg-light); border:1.5px solid var(--border); border-radius:10px; padding:12px 16px; outline:none; transition:border-color .2s,box-shadow .2s; width:100%; }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(26,157,232,.12); }
+    .form-group textarea { resize:vertical; min-height:130px; }
+    .form-group select { appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b7280' d='M1 1l5 5 5-5'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 16px center; padding-right:40px; }
+    .btn-submit { width:100%; padding:14px; background:linear-gradient(135deg,var(--blue),var(--blue-dark)); color:#fff; font-family:'Poppins',sans-serif; font-size:1rem; font-weight:700; border:none; border-radius:10px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; transition:opacity .2s,transform .2s; }
+    .btn-submit:hover { opacity:.9; transform:translateY(-2px); }
+    .form-note { font-size:.78rem; color:var(--text-muted); text-align:center; margin-top:14px; }
+
+    /* Success message */
+    .form-success { display:none; text-align:center; padding:40px 20px; }
+    .form-success i { font-size:3rem; color:#22c55e; margin-bottom:16px; }
+    .form-success h3 { font-size:1.3rem; font-weight:700; margin-bottom:8px; }
+    .form-success p { font-size:.9rem; color:var(--text-muted); }
+
+    /* ── MAP ── */
+    .map-section { padding:0 0 96px; background:var(--bg-light); }
+    .map-wrap { border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-lg); height:380px; }
+    .map-wrap iframe { width:100%; height:100%; border:0; }
+
+    /* ── FAQ STRIP ── */
+    .faq-strip { padding:80px 0; background:var(--white); }
+    .faq-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:48px; }
+    .faq-card { background:var(--bg-light); border-radius:14px; padding:28px; border:1.5px solid var(--border); transition:border-color .3s,transform .3s; }
+    .faq-card:hover { border-color:var(--blue); transform:translateY(-4px); }
+    .faq-card h4 { font-size:.95rem; font-weight:700; color:var(--text); margin-bottom:10px; }
+    .faq-card p { font-size:.85rem; color:var(--text-muted); line-height:1.65; }
+
+    /* ── FOOTER ── */
+    .footer { background:#0d1117; color:rgba(255,255,255,.75); padding:72px 0 0; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:48px; padding-bottom:56px; border-bottom:1px solid rgba(255,255,255,.08); }
+    .footer-brand .footer-logo { height:90px; margin-bottom:20px; }
+    .footer-brand p { font-size:.85rem; line-height:1.75; color:rgba(255,255,255,.55); margin-bottom:24px; max-width:280px; }
+    .social-links { display:flex; gap:12px; }
+    .social-links a { width:38px; height:38px; border-radius:50%; border:1.5px solid rgba(255,255,255,.2); display:flex; align-items:center; justify-content:center; font-size:.9rem; color:rgba(255,255,255,.7); transition:all .2s; }
+    .social-links a:hover { background:var(--blue); border-color:var(--blue); color:#fff; }
+    .footer-col h4 { font-size:1rem; font-weight:700; color:var(--yellow); margin-bottom:20px; }
+    .footer-col ul { display:flex; flex-direction:column; gap:10px; }
+    .footer-col a { font-size:.875rem; color:rgba(255,255,255,.55); transition:color .2s; }
+    .footer-col a:hover { color:var(--blue); }
+    .footer-contact-item { display:flex; gap:12px; margin-bottom:16px; align-items:flex-start; }
+    .footer-contact-item i { color:var(--blue); font-size:.9rem; margin-top:3px; flex-shrink:0; }
+    .footer-contact-item p { font-size:.85rem; color:rgba(255,255,255,.55); line-height:1.5; }
+    .landmark { color:var(--yellow-dark); font-size:.82rem; }
+    .footer-bottom { text-align:center; padding:20px; font-size:.83rem; color:rgba(255,255,255,.4); }
+
+    @media (max-width:1024px) {
+      .contact-grid { grid-template-columns:1fr; gap:40px; }
+      .faq-grid { grid-template-columns:repeat(2,1fr); }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width:768px) {
+      .nav-links,.btn-portal { display:none; }
+      .hamburger { display:flex; }
+      .nav-links.open { display:flex; flex-direction:column; position:fixed; top:108px; left:0; right:0; background:#fff; padding:24px; gap:20px; border-bottom:1px solid var(--border); box-shadow:var(--shadow-lg); }
+      .form-row { grid-template-columns:1fr; }
+      .contact-form-wrap { padding:32px 24px; }
+      .faq-grid { grid-template-columns:1fr; }
+      .footer-grid { grid-template-columns:1fr; }
+      .map-wrap { height:260px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="ngwt.png" alt="New Wings Technology" class="logo-img"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"     class="nav-link">Home</a></li>
+      <li><a href="about.html"     class="nav-link">About Us</a></li>
+      <li><a href="services.html"  class="nav-link">Services</a></li>
+      <li><a href="courses.html"   class="nav-link">Courses</a></li>
+      <li><a href="placement.html" class="nav-link">Placement</a></li>
+      <li><a href="reviews.html"   class="nav-link">Reviews</a></li>
+      <li><a href="contact.html"   class="nav-link active">Contact</a></li>
+    </ul>
+    <a href="portal.html" class="btn-portal">Student Portal <i class="fas fa-arrow-right"></i></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <h1>Contact Us</h1>
+  <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Contact</p>
+</section>
+
+<!-- ── CONTACT SECTION ── -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- LEFT: Info cards -->
+      <div class="contact-info">
+        <div>
+          <div class="section-badge">GET IN TOUCH</div>
+          <h2 class="section-title">We're Here to <span class="highlight">Help You</span></h2>
+          <p style="color:var(--text-muted);font-size:.95rem;line-height:1.7;margin-bottom:32px;">Have questions about our courses, admissions, or placement support? Reach out — our team responds within 24 hours.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="info-text">
+            <h4>Visit Us</h4>
+            <p>19/1, Kamaraj Nagar Main Road<br/>Avadi, Chennai – 600 071</p>
+            <p class="landmark-note"><i class="fas fa-info-circle"></i>&nbsp; First Floor of Apollo Pharmacy</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="info-text">
+            <h4>Call Us</h4>
+            <a href="tel:09384818257">09384818257</a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-envelope"></i></div>
+          <div class="info-text">
+            <h4>Email Us</h4>
+            <a href="mailto:admin@ngwt.in">admin@ngwt.in</a>
+          </div>
+        </div>
+
+        <div class="hours-card">
+          <h4><i class="fas fa-clock" style="margin-right:8px"></i>Office Hours</h4>
+          <div class="hours-row"><span>Monday – Friday</span><span>9:00 AM – 7:00 PM</span></div>
+          <div class="hours-row"><span>Saturday</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Enquiry form -->
+      <div class="contact-form-wrap">
+        <div class="form-header">
+          <h3>Send Us an <span class="highlight">Enquiry</span></h3>
+          <p>Fill in the details below and we'll get back to you promptly.</p>
+        </div>
+        <form id="enquiryForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Full Name <span style="color:red">*</span></label>
+              <input type="text" id="fname" name="fname" placeholder="Your full name" required/>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span style="color:red">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address <span style="color:red">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required/>
+          </div>
+          <div class="form-group">
+            <label for="course">Course Interested In</label>
+            <select id="course" name="course">
+              <option value="">— Select a Course —</option>
+              <option>Full Stack Web Development</option>
+              <option>Python &amp; Data Science</option>
+              <option>AI &amp; Machine Learning</option>
+              <option>Cybersecurity</option>
+              <option>Cloud Computing (AWS / Azure)</option>
+              <option>Digital Marketing</option>
+              <option>Final Year Project Support</option>
+              <option>Corporate Training</option>
+              <option>Other / General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your background, goals, or any specific questions…"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Enquiry <i class="fas fa-paper-plane"></i></button>
+          <p class="form-note"><i class="fas fa-lock" style="margin-right:4px"></i>Your details are kept private and never shared with third parties.</p>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <i class="fas fa-check-circle"></i>
+          <h3>Enquiry Received!</h3>
+          <p>Thank you for reaching out. Our team will contact you within 24 hours.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── MAP ── -->
+<section class="map-section">
+  <div class="container">
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.3540123456789!2d80.0983!3d13.1067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA2JzI0LjEiTiA4MMKwMDUnNTMuOSJF!5e0!3m2!1sen!2sin!4v1234567890"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="New Wings Technology location map — Avadi, Chennai">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ STRIP ── -->
+<section class="faq-strip">
+  <div class="container" style="text-align:center;">
+    <div class="section-badge">FAQ</div>
+    <h2 class="section-title">Common <span class="highlight">Questions</span></h2>
+    <p style="color:var(--text-muted);max-width:560px;margin:0 auto;font-size:.95rem;">Quick answers to what most students ask before enrolling.</p>
+    <div class="faq-grid">
+      <div class="faq-card">
+        <h4>What is the course duration?</h4>
+        <p>Most courses run for 3 to 6 months depending on the programme. Flexible weekend batches are also available.</p>
+      </div>
+      <div class="faq-card">
+        <h4>Do you offer placement assistance?</h4>
+        <p>Yes. We provide 100% placement support including resume preparation, mock interviews, and direct company tie-ups.</p>
+      </div>
+      <div class="faq-card">
+        <h4>Is there an EMI option for fees?</h4>
+        <p>We offer easy instalment plans for all courses. Contact our team to find an option that suits your budget.</p>
+      </div>
+      <div class="faq-card">
+        <h4>What certificate will I receive?</h4>
+        <p>You receive an industry-recognised certificate from New Wings Technology upon successful course completion.</p>
+      </div>
+      <div class="faq-card">
+        <h4>Can working professionals join?</h4>
+        <p>Absolutely. We run weekend and evening batches designed specifically for working professionals.</p>
+      </div>
+      <div class="faq-card">
+        <h4>Do I need prior coding experience?</h4>
+        <p>No prior experience is needed for most courses. We start from the basics and build up at a comfortable pace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="ngwt.png" alt="New Wings Technology" class="footer-logo"/>
+      <p>Premier IT training institute in Avadi, Chennai — bridging education and industry since 2015.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="courses.html">Courses</a></li><li><a href="placement.html">Placement</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Our Services</h4><ul><li><a href="services.html">Internship Programs</a></li><li><a href="services.html">Final Year Projects</a></li><li><a href="services.html">Corporate Training</a></li><li><a href="placement.html">Placement Support</a></li><li><a href="services.html">Digital Marketing</a></li></ul></div>
+    <div class="footer-col"><h4>Get in Touch</h4>
+      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p>19/1, Kamaraj Nagar Main Road, Avadi, Chennai-600071<br/><span class="landmark">Landmark: First Floor of Apollo Pharmacy</span></p></div>
+      <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><p>09384818257</p></div>
+      <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>admin@ngwt.in</p></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="footerYear"></span> New Wings Technology. All rights reserved.</p></div>
+</footer>
+
+<script>
+  // Footer year
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+  // Navbar scroll shadow
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+
+  // Mobile hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navLinksEl = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinksEl.classList.toggle('open'));
+  navLinksEl.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinksEl.classList.remove('open')));
+
+  // Form submit — show success message
+  document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const fname  = document.getElementById('fname').value.trim();
+    const phone  = document.getElementById('phone').value.trim();
+    const email  = document.getElementById('email').value.trim();
+    if (!fname || !phone || !email) {
+      alert('Please fill in your Name, Phone, and Email before submitting.');
+      return;
+    }
+    this.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  });
+</script>
+</body>
+</html>

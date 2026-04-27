@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | New Wings Technology</title>
+  <meta name="description" content="Learn about New Wings Technology – 9+ years of IT training excellence in Avadi, Chennai. Industry-certified curriculum, expert mentors and 50+ corporate hiring partners."/>
+  <meta name="keywords" content="about New Wings Technology, IT institute Chennai, Avadi training centre, IT training history"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.newwingstechnology.com/about.html"/>
+  <meta property="og:title" content="About Us | New Wings Technology"/>
+  <meta property="og:description" content="9+ years of IT training excellence in Avadi, Chennai. Industry-certified curriculum and expert mentors."/>
+  <meta property="og:url" content="https://www.newwingstechnology.com/about.html"/>
+  <meta property="og:type" content="website"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue:#1a9de8; --blue-dark:#0a7ec0; --yellow:#f5c500; --yellow-dark:#d4a800;
+      --dark:#111827; --text:#1a1a2e; --text-muted:#6b7280;
+      --bg-light:#f8faff; --white:#ffffff; --border:#e5e7eb;
+      --shadow:0 4px 24px rgba(0,0,0,0.07); --shadow-lg:0 12px 48px rgba(0,0,0,0.13);
+      --radius:18px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--white); overflow-x:hidden; }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; display:block; }
+    ul { list-style:none; }
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    .highlight { color:var(--blue); }
+    .section-badge { display:inline-block; font-size:.72rem; font-weight:600; letter-spacing:2px; color:var(--blue); border:1.5px solid var(--blue); border-radius:100px; padding:4px 16px; margin-bottom:16px; text-transform:uppercase; }
+    .section-title { font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:800; line-height:1.25; color:var(--text); margin-bottom:16px; }
+
+    /* NAVBAR */
+    .navbar { position:fixed; top:0; left:0; right:0; background:rgba(255,255,255,0.97); backdrop-filter:blur(12px); border-bottom:1px solid rgba(229,231,235,0.8); z-index:1000; transition:box-shadow .3s; }
+    .navbar.scrolled { box-shadow:var(--shadow); }
+    .nav-container { max-width:1300px; margin:0 auto; padding:0 32px; height:108px; display:flex; align-items:center; gap:40px; }
+    .nav-logo { display:flex; align-items:center; background:#fff; padding:4px 14px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.13); }
+    .logo-img { height:95px; width:auto; object-fit:contain; filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15)); }
+    .nav-links { display:flex; align-items:center; gap:36px; margin-left:auto; }
+    .nav-link { font-size:.91rem; font-weight:500; color:var(--text-muted); transition:color .2s; position:relative; }
+    .nav-link::after { content:''; position:absolute; bottom:-4px; left:0; right:0; height:2px; background:var(--blue); transform:scaleX(0); transition:transform .2s; }
+    .nav-link:hover, .nav-link.active { color:var(--blue); }
+    .nav-link:hover::after, .nav-link.active::after { transform:scaleX(1); }
+    .btn-portal { display:flex; align-items:center; gap:8px; background:var(--yellow); color:var(--text); font-size:.9rem; font-weight:700; padding:11px 22px; border-radius:8px; white-space:nowrap; transition:background .2s,transform .2s; }
+    .btn-portal:hover { background:var(--yellow-dark); transform:translateY(-1px); }
+    .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; margin-left:auto; }
+    .hamburger span { display:block; width:24px; height:2px; background:var(--text); border-radius:2px; transition:all .3s; }
+
+    /* PAGE HERO */
+    .page-hero { padding:148px 24px 72px; background:linear-gradient(135deg,#0f1e3d 0%,#1a9de8 100%); text-align:center; position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; top:-80px; left:50%; transform:translateX(-50%); width:700px; height:350px; background:radial-gradient(ellipse,rgba(255,255,255,0.07) 0%,transparent 70%); pointer-events:none; }
+    .page-hero h1 { font-size:clamp(2rem,4vw,3rem); font-weight:800; color:#fff; margin-bottom:12px; position:relative; }
+    .page-hero .breadcrumb { font-size:.88rem; color:rgba(255,255,255,0.7); position:relative; }
+    .page-hero .breadcrumb a { color:var(--yellow); }
+    .page-hero .breadcrumb a:hover { text-decoration:underline; }
+
+    /* ABOUT SECTION */
+    .about { padding:96px 0; background:var(--bg-light); }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .about-img-wrap { position:relative; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-lg); }
+    .about-img-wrap img { width:100%; height:420px; object-fit:cover; }
+    .about-badge { position:absolute; bottom:24px; right:24px; background:var(--yellow); color:var(--text); font-weight:700; font-size:.88rem; padding:10px 18px; border-radius:8px; display:flex; align-items:center; gap:8px; box-shadow:var(--shadow); }
+    .about-content p { font-size:.95rem; color:var(--text-muted); line-height:1.75; margin-bottom:16px; }
+    .about-list { margin:24px 0 32px; display:flex; flex-direction:column; gap:10px; }
+    .about-list li { display:flex; align-items:center; gap:10px; font-size:.92rem; color:var(--text); font-weight:500; }
+    .about-list i { color:var(--blue); font-size:1rem; }
+    .btn-primary { display:inline-flex; align-items:center; gap:8px; background:var(--blue); color:#fff; font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; padding:13px 30px; border-radius:8px; border:none; cursor:pointer; transition:background .2s,transform .2s,box-shadow .2s; }
+    .btn-primary:hover { background:var(--blue-dark); transform:translateY(-2px); box-shadow:0 8px 24px rgba(26,157,232,.35); }
+
+    /* VALUES */
+    .values { padding:80px 0; background:#fff; }
+    .values-title { text-align:center; margin-bottom:48px; }
+    .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .value-card { background:var(--bg-light); border-radius:var(--radius); padding:32px 24px; text-align:center; border:1.5px solid var(--border); transition:transform .3s,box-shadow .3s; }
+    .value-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+    .value-icon { width:64px; height:64px; background:#e8f4fd; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:1.6rem; color:var(--blue); margin:0 auto 20px; }
+    .value-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:10px; }
+    .value-card p { font-size:.88rem; color:var(--text-muted); line-height:1.65; }
+
+    /* STATS STRIP */
+    .stats-strip { background:linear-gradient(135deg,#0f1e3d,#0d1117); padding:56px 0; }
+    .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center; }
+    .strip-stat span { display:block; font-size:2.6rem; font-weight:800; color:var(--yellow); margin-bottom:8px; }
+    .strip-stat p { font-size:.9rem; color:rgba(255,255,255,.7); }
+
+    /* FOOTER */
+    .footer { background:#0d1117; color:rgba(255,255,255,.75); padding:72px 0 0; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:48px; padding-bottom:56px; border-bottom:1px solid rgba(255,255,255,.08); }
+    .footer-brand .footer-logo { height:90px; margin-bottom:20px; }
+    .footer-brand p { font-size:.85rem; line-height:1.75; color:rgba(255,255,255,.55); margin-bottom:24px; max-width:280px; }
+    .social-links { display:flex; gap:12px; }
+    .social-links a { width:38px; height:38px; border-radius:50%; border:1.5px solid rgba(255,255,255,.2); display:flex; align-items:center; justify-content:center; font-size:.9rem; color:rgba(255,255,255,.7); transition:all .2s; }
+    .social-links a:hover { background:var(--blue); border-color:var(--blue); color:#fff; }
+    .footer-col h4 { font-size:1rem; font-weight:700; color:var(--yellow); margin-bottom:20px; }
+    .footer-col ul { display:flex; flex-direction:column; gap:10px; }
+    .footer-col a { font-size:.875rem; color:rgba(255,255,255,.55); transition:color .2s; }
+    .footer-col a:hover { color:var(--blue); }
+    .footer-contact-item { display:flex; gap:12px; margin-bottom:16px; align-items:flex-start; }
+    .footer-contact-item i { color:var(--blue); font-size:.9rem; margin-top:3px; flex-shrink:0; }
+    .footer-contact-item p { font-size:.85rem; color:rgba(255,255,255,.55); line-height:1.5; }
+    .landmark { color:var(--yellow-dark); font-size:.82rem; }
+    .footer-bottom { text-align:center; padding:20px; font-size:.83rem; color:rgba(255,255,255,.4); }
+
+    @media (max-width:1024px) { .about-grid { grid-template-columns:1fr; gap:48px; } .values-grid { grid-template-columns:1fr 1fr; } .stats-grid { grid-template-columns:repeat(2,1fr); } .footer-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:768px) { .nav-links,.btn-portal { display:none; } .hamburger { display:flex; } .nav-links.open { display:flex; flex-direction:column; position:fixed; top:108px; left:0; right:0; background:#fff; padding:24px; gap:20px; border-bottom:1px solid var(--border); box-shadow:var(--shadow-lg); } .values-grid { grid-template-columns:1fr; } .footer-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="ngwt.png" alt="New Wings Technology" class="logo-img"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"     class="nav-link">Home</a></li>
+      <li><a href="about.html"     class="nav-link active">About Us</a></li>
+      <li><a href="services.html"  class="nav-link">Services</a></li>
+      <li><a href="courses.html"   class="nav-link">Courses</a></li>
+      <li><a href="placement.html" class="nav-link">Placement</a></li>
+      <li><a href="reviews.html"   class="nav-link">Reviews</a></li>
+      <li><a href="contact.html"   class="nav-link">Contact</a></li>
+    </ul>
+    <a href="portal.html" class="btn-portal">Student Portal <i class="fas fa-arrow-right"></i></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <h1>About Us</h1>
+  <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; About Us</p>
+</section>
+
+<section class="about">
+  <div class="container about-grid">
+    <div class="about-img-wrap">
+      <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&h=420&fit=crop" alt="About New Wings Technology"/>
+      <div class="about-badge"><i class="fas fa-award"></i><span>9+ Years of Excellence</span></div>
+    </div>
+    <div class="about-content">
+      <div class="section-badge">WHO WE ARE</div>
+      <h2 class="section-title">Bridging the Gap Between <span class="highlight">Education & Industry</span></h2>
+      <p>Founded with the vision to bridge the gap between traditional education and evolving industry needs, <strong>NEW WINGS TECHNOLOGY</strong> has been a trusted name in IT training for over 9 years in Avadi, Chennai.</p>
+      <p>We offer cutting-edge curriculum, industry-expert mentors, and a dedicated placement team to ensure every student walks away with the skills and confidence to succeed in today's tech landscape.</p>
+      <p>Our commitment is simple — every student who walks through our doors leaves with job-ready skills, real-world project experience, and access to a powerful corporate network.</p>
+      <ul class="about-list">
+        <li><i class="fas fa-check-circle"></i> Industry-certified curriculum updated every semester</li>
+        <li><i class="fas fa-check-circle"></i> Expert mentors with 5–15 years of real-world experience</li>
+        <li><i class="fas fa-check-circle"></i> 50+ corporate hiring partners across Tamil Nadu</li>
+        <li><i class="fas fa-check-circle"></i> Dedicated placement assistance until you get placed</li>
+        <li><i class="fas fa-check-circle"></i> Live project experience during every course</li>
+      </ul>
+      <a href="courses.html" class="btn-primary">Explore Our Courses <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <div class="values-title">
+      <div class="section-badge">OUR VALUES</div>
+      <h2 class="section-title">What Drives <span class="highlight">Everything We Do</span></h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon"><i class="fas fa-bullseye"></i></div>
+        <h3>Industry Focus</h3>
+        <p>Every course is designed in collaboration with industry professionals to ensure what you learn is exactly what employers need.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="fas fa-hands-helping"></i></div>
+        <h3>Student First</h3>
+        <p>We measure our success by yours. Our placement team works tirelessly until every student finds a role they're proud of.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Hands-On Learning</h3>
+        <p>No theory-only classes. Every course includes live projects, real tools, and practical assessments that mirror the workplace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="strip-stat"><span>500+</span><p>Students Placed</p></div>
+      <div class="strip-stat"><span>50+</span><p>Corporate Partners</p></div>
+      <div class="strip-stat"><span>95%</span><p>Placement Rate</p></div>
+      <div class="strip-stat"><span>9+</span><p>Years of Excellence</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="ngwt.png" alt="New Wings Technology" class="footer-logo"/>
+      <p>Premier IT training institute in Avadi, Chennai — bridging education and industry since 2015.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="placement.html">Placement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="services.html">Internship Programs</a></li>
+        <li><a href="services.html">Final Year Projects</a></li>
+        <li><a href="services.html">Corporate Training</a></li>
+        <li><a href="placement.html">Placement Support</a></li>
+        <li><a href="services.html">Digital Marketing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p>19/1, Kamaraj Nagar Main Road, Avadi, Chennai-600071<br/><span class="landmark">Landmark: First Floor of Apollo Pharmacy</span></p></div>
+      <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><p>09384818257</p></div>
+      <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>admin@ngwt.in</p></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="footerYear"></span> New Wings Technology. All rights reserved.</p></div>
+</footer>
+
+<script>
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  const hamburger = document.getElementById('hamburger');
+  const navLinksEl = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinksEl.classList.toggle('open'));
+  navLinksEl.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinksEl.classList.remove('open')));
+</script>
+</body>
+</html>

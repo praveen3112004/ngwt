@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Development Training | New Wings Technology – Avadi, Chennai</title>
+  <meta name="description" content="Full stack web development training in Chennai at New Wings Technology. Learn HTML, CSS, JavaScript, React, Node.js and deploy real applications from day one."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.newwingstechnology.com/service-webdev.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--blue:#1a9de8;--blue-dark:#0a7ec0;--yellow:#f5c500;--yellow-dark:#d4a800;--teal:#0d9488;--text:#1a1a2e;--text-muted:#6b7280;--bg-light:#f8faff;--white:#ffffff;--border:#e5e7eb;--shadow:0 4px 24px rgba(0,0,0,0.07);--shadow-lg:0 12px 48px rgba(0,0,0,0.13);--radius:18px;}
+    html{scroll-behavior:smooth;}body{font-family:'Poppins',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}img{max-width:100%;display:block;}ul{list-style:none;}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px;}
+    .highlight{color:var(--blue);}
+    .section-badge{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:2px;color:var(--blue);border:1.5px solid var(--blue);border-radius:100px;padding:4px 16px;margin-bottom:16px;text-transform:uppercase;}
+    .section-title{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.25;color:var(--text);margin-bottom:16px;}
+    .navbar{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(229,231,235,0.8);z-index:1000;transition:box-shadow .3s;}
+    .navbar.scrolled{box-shadow:var(--shadow);}
+    .nav-container{max-width:1300px;margin:0 auto;padding:0 32px;height:108px;display:flex;align-items:center;gap:40px;}
+    .nav-logo{display:flex;align-items:center;background:#fff;padding:4px 14px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.13);}
+    .logo-img{height:95px;width:auto;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));}
+    .nav-links{display:flex;align-items:center;gap:36px;margin-left:auto;}
+    .nav-link{font-size:.91rem;font-weight:500;color:var(--text-muted);transition:color .2s;position:relative;}
+    .nav-link::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--blue);transform:scaleX(0);transition:transform .2s;}
+    .nav-link:hover,.nav-link.active{color:var(--blue);}
+    .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);}
+    .btn-portal{display:flex;align-items:center;gap:8px;background:var(--yellow);color:var(--text);font-size:.9rem;font-weight:700;padding:11px 22px;border-radius:8px;white-space:nowrap;transition:background .2s,transform .2s;}
+    .btn-portal:hover{background:var(--yellow-dark);transform:translateY(-1px);}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;margin-left:auto;}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;}
+
+    .page-hero{padding:148px 24px 80px;background:linear-gradient(135deg,#0d1117 0%,#0d5c4a 50%,#0a7ec0 100%);text-align:center;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:700px;height:350px;background:radial-gradient(ellipse,rgba(255,255,255,0.08) 0%,transparent 70%);pointer-events:none;}
+    .hero-badge{display:inline-block;background:rgba(13,148,136,.2);border:1.5px solid var(--teal);color:#2dd4bf;font-size:.72rem;font-weight:700;letter-spacing:2px;border-radius:100px;padding:5px 18px;margin-bottom:20px;text-transform:uppercase;}
+    .page-hero h1{font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:800;color:#fff;margin-bottom:16px;}
+    .page-hero p{font-size:1rem;color:rgba(255,255,255,.8);max-width:640px;margin:0 auto 32px;line-height:1.7;}
+    .page-hero .breadcrumb{font-size:.88rem;color:rgba(255,255,255,0.6);}
+    .page-hero .breadcrumb a{color:var(--yellow);}
+    .hero-stats{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;margin-top:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.15);}
+    .hero-stat strong{display:block;font-size:2rem;font-weight:800;color:var(--yellow);}
+    .hero-stat span{font-size:.82rem;color:rgba(255,255,255,.7);}
+
+    /* CODE TERMINAL VISUAL */
+    .terminal-section{padding:96px 0;background:var(--bg-light);}
+    .terminal-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+    .terminal{background:#1e1e2e;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);}
+    .terminal-bar{background:#2a2a3e;padding:12px 16px;display:flex;align-items:center;gap:8px;}
+    .t-dot{width:12px;height:12px;border-radius:50%;}
+    .t-dot.red{background:#ff5f57;}
+    .t-dot.yellow{background:#febc2e;}
+    .t-dot.green{background:#28c840;}
+    .terminal-bar span{font-size:.8rem;color:rgba(255,255,255,.5);margin-left:8px;}
+    .terminal-body{padding:24px;font-family:'Courier New',monospace;font-size:.82rem;line-height:1.8;}
+    .tc{color:#7c85c0;}.tk{color:#c678dd;}.ts{color:#98c379;}.tn{color:#e5c07b;}.tf{color:#61afef;}.tg{color:#56b6c2;}.tw{color:rgba(255,255,255,.7);}
+
+    /* STACK LAYERS */
+    .stack-section{padding:80px 0;background:var(--white);}
+    .stack-layers{display:flex;flex-direction:column;gap:16px;margin-top:56px;max-width:900px;margin-left:auto;margin-right:auto;}
+    .stack-layer{border-radius:14px;padding:24px 32px;display:flex;align-items:center;gap:24px;}
+    .stack-layer.frontend{background:linear-gradient(135deg,#e8f4fd,#dbeafe);}
+    .stack-layer.backend{background:linear-gradient(135deg,#f0fdf4,#dcfce7);}
+    .stack-layer.database{background:linear-gradient(135deg,#fef3c7,#fde68a);}
+    .stack-layer.deploy{background:linear-gradient(135deg,#fdf2f8,#fce7f3);}
+    .stack-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;min-width:90px;color:var(--text-muted);}
+    .stack-techs{display:flex;flex-wrap:wrap;gap:10px;}
+    .st{background:#fff;border-radius:8px;padding:6px 14px;font-size:.82rem;font-weight:600;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,.06);}
+
+    /* PROJECTS */
+    .projects-section{padding:80px 0;background:var(--bg-light);}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+    .project-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .3s;}
+    .project-card:hover{transform:translateY(-6px);}
+    .project-thumb{height:120px;display:flex;align-items:center;justify-content:center;font-size:3rem;}
+    .project-body{padding:20px;}
+    .project-body h4{font-size:.95rem;font-weight:700;margin-bottom:8px;}
+    .project-body p{font-size:.82rem;color:var(--text-muted);line-height:1.55;margin-bottom:14px;}
+    .project-tags{display:flex;flex-wrap:wrap;gap:6px;}
+    .pt{font-size:.7rem;font-weight:600;background:#e8f4fd;color:var(--blue);border-radius:100px;padding:3px 10px;}
+
+    .cta-strip{padding:80px 0;background:linear-gradient(135deg,#0f1e3d,#0d1117);text-align:center;}
+    .cta-strip h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-strip p{color:rgba(255,255,255,.7);font-size:.95rem;margin-bottom:32px;}
+    .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:600;padding:13px 30px;border-radius:8px;border:none;cursor:pointer;transition:background .2s,transform .2s;}
+    .btn-primary:hover{background:var(--blue-dark);transform:translateY(-2px);}
+    .btn-outline-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:600;padding:12px 28px;border-radius:8px;border:2px solid rgba(255,255,255,.5);cursor:pointer;transition:all .2s;}
+    .btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:#fff;}
+    .footer{background:#0d1117;color:rgba(255,255,255,.75);padding:72px 0 0;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .footer-brand .footer-logo{height:90px;margin-bottom:20px;}
+    .footer-brand p{font-size:.85rem;line-height:1.75;color:rgba(255,255,255,.55);margin-bottom:24px;max-width:280px;}
+    .social-links{display:flex;gap:12px;}
+    .social-links a{width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:rgba(255,255,255,.7);transition:all .2s;}
+    .social-links a:hover{background:var(--blue);border-color:var(--blue);color:#fff;}
+    .footer-col h4{font-size:1rem;font-weight:700;color:var(--yellow);margin-bottom:20px;}
+    .footer-col ul{display:flex;flex-direction:column;gap:10px;}
+    .footer-col a{font-size:.875rem;color:rgba(255,255,255,.55);transition:color .2s;}
+    .footer-col a:hover{color:var(--blue);}
+    .footer-contact-item{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start;}
+    .footer-contact-item i{color:var(--blue);font-size:.9rem;margin-top:3px;flex-shrink:0;}
+    .footer-contact-item p{font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.5;}
+    .landmark{color:var(--yellow-dark);font-size:.82rem;}
+    .footer-bottom{text-align:center;padding:20px;font-size:.83rem;color:rgba(255,255,255,.4);}
+    @media(max-width:1024px){.terminal-grid{grid-template-columns:1fr;}.projects-grid{grid-template-columns:1fr 1fr;}.footer-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:768px){.nav-links,.btn-portal{display:none;}.hamburger{display:flex;}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:108px;left:0;right:0;background:#fff;padding:24px;gap:20px;border-bottom:1px solid var(--border);box-shadow:var(--shadow-lg);}.projects-grid{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="ngwt.png" alt="New Wings Technology" class="logo-img"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="services.html" class="nav-link active">Services</a></li>
+      <li><a href="courses.html" class="nav-link">Courses</a></li>
+      <li><a href="placement.html" class="nav-link">Placement</a></li>
+      <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="portal.html" class="btn-portal">Student Portal <i class="fas fa-arrow-right"></i></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-badge">Full Stack Training</div>
+  <h1>Web Development</h1>
+  <p>From writing your first HTML tag to deploying a full-stack application in the cloud — we teach everything in between, hands-on.</p>
+  <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="services.html">Services</a> &rsaquo; Web Development</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>6</strong><span>Month Program</span></div>
+    <div class="hero-stat"><strong>10+</strong><span>Real Projects Built</span></div>
+    <div class="hero-stat"><strong>React</strong><span>+ Node + MongoDB</span></div>
+    <div class="hero-stat"><strong>AWS</strong><span>Deployment Included</span></div>
+  </div>
+</section>
+
+<!-- TERMINAL + DESCRIPTION -->
+<section class="terminal-section">
+  <div class="container">
+    <div class="terminal-grid">
+      <div>
+        <div class="section-badge">WHAT YOU'LL LEARN</div>
+        <h2 class="section-title">Code Real Apps from <span class="highlight">Day One</span></h2>
+        <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;margin-bottom:24px;">We don't start with abstract theory. From session one, you write code that runs in the browser. Every concept is immediately applied to a project — so you build muscle memory, not just knowledge.</p>
+        <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;margin-bottom:24px;">By the end of the programme, you'll have built and deployed multiple full-stack applications, each hosted on the web and linked in your GitHub portfolio.</p>
+        <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;">Our instructors are active developers who work on real products — not just teachers who teach from a textbook.</p>
+      </div>
+      <div>
+        <div class="terminal">
+          <div class="terminal-bar"><div class="t-dot red"></div><div class="t-dot yellow"></div><div class="t-dot green"></div><span>app.js — New Wings Technology</span></div>
+          <div class="terminal-body">
+            <span class="tc">// Full Stack Web Dev — NGWT</span><br/>
+            <span class="tk">const</span> <span class="tn">express</span> <span class="tw">= </span><span class="tf">require</span><span class="tw">(</span><span class="ts">'express'</span><span class="tw">);</span><br/>
+            <span class="tk">const</span> <span class="tn">mongoose</span> <span class="tw">= </span><span class="tf">require</span><span class="tw">(</span><span class="ts">'mongoose'</span><span class="tw">);</span><br/>
+            <span class="tk">const</span> <span class="tn">app</span> <span class="tw">= </span><span class="tf">express</span><span class="tw">();</span><br/><br/>
+            <span class="tg">mongoose</span><span class="tw">.</span><span class="tf">connect</span><span class="tw">(</span><span class="ts">process.env.MONGO_URI</span><span class="tw">);</span><br/><br/>
+            <span class="tn">app</span><span class="tw">.</span><span class="tf">get</span><span class="tw">(</span><span class="ts">'/'</span><span class="tw">, (</span><span class="tn">req</span><span class="tw">, </span><span class="tn">res</span><span class="tw">) => {</span><br/>
+            &nbsp;&nbsp;<span class="tn">res</span><span class="tw">.</span><span class="tf">json</span><span class="tw">({ </span><span class="ts">message</span><span class="tw">: </span><span class="ts">'Hello from NGWT!'</span><span class="tw"> });</span><br/>
+            <span class="tw">});</span><br/><br/>
+            <span class="tn">app</span><span class="tw">.</span><span class="tf">listen</span><span class="tw">(</span><span class="ts">3000</span><span class="tw">, () => </span><span class="tf">console</span><span class="tw">.</span><span class="tf">log</span><span class="tw">(</span><br/>
+            &nbsp;&nbsp;<span class="ts">'🚀 Server live on port 3000'</span><br/>
+            <span class="tw">));</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section class="stack-section">
+  <div class="container" style="text-align:center;">
+    <div class="section-badge">TECH STACK</div>
+    <h2 class="section-title">The Complete <span class="highlight">MERN Stack</span> & Beyond</h2>
+    <div class="stack-layers">
+      <div class="stack-layer frontend"><span class="stack-label">Frontend</span><div class="stack-techs"><span class="st">HTML5</span><span class="st">CSS3</span><span class="st">JavaScript (ES6+)</span><span class="st">React.js</span><span class="st">Redux</span><span class="st">Tailwind CSS</span></div></div>
+      <div class="stack-layer backend"><span class="stack-label">Backend</span><div class="stack-techs"><span class="st">Node.js</span><span class="st">Express.js</span><span class="st">REST APIs</span><span class="st">JWT Auth</span><span class="st">Socket.io</span></div></div>
+      <div class="stack-layer database"><span class="stack-label">Database</span><div class="stack-techs"><span class="st">MongoDB</span><span class="st">Mongoose</span><span class="st">MySQL</span><span class="st">Redis (caching)</span></div></div>
+      <div class="stack-layer deploy"><span class="stack-label">DevOps</span><div class="stack-techs"><span class="st">Git & GitHub</span><span class="st">AWS EC2</span><span class="st">Nginx</span><span class="st">Docker</span><span class="st">CI/CD</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects-section">
+  <div class="container" style="text-align:center;">
+    <div class="section-badge">PORTFOLIO PROJECTS</div>
+    <h2 class="section-title">Projects You'll <span class="highlight">Actually Build</span></h2>
+    <div class="projects-grid">
+      <div class="project-card"><div class="project-thumb" style="background:#e8f4fd;">🛒</div><div class="project-body"><h4>E-Commerce Store</h4><p>Full stack shopping platform with product listings, cart, payments, and admin panel.</p><div class="project-tags"><span class="pt">React</span><span class="pt">Node</span><span class="pt">MongoDB</span><span class="pt">Stripe</span></div></div></div>
+      <div class="project-card"><div class="project-thumb" style="background:#f0fdf4;">💬</div><div class="project-body"><h4>Real-Time Chat App</h4><p>Live messaging app with rooms, online/offline status, and message history.</p><div class="project-tags"><span class="pt">Socket.io</span><span class="pt">Express</span><span class="pt">JWT</span></div></div></div>
+      <div class="project-card"><div class="project-thumb" style="background:#fef3c7;">📋</div><div class="project-body"><h4>Project Manager (Kanban)</h4><p>Drag-and-drop task board with teams, deadlines, and role-based access control.</p><div class="project-tags"><span class="pt">React</span><span class="pt">Redux</span><span class="pt">REST API</span></div></div></div>
+      <div class="project-card"><div class="project-thumb" style="background:#fdf4ff;">📊</div><div class="project-body"><h4>Analytics Dashboard</h4><p>Visualise data with charts, filters, and export functionality — connected to a live API.</p><div class="project-tags"><span class="pt">Chart.js</span><span class="pt">Node</span><span class="pt">MySQL</span></div></div></div>
+      <div class="project-card"><div class="project-thumb" style="background:#f0f9ff;">🏠</div><div class="project-body"><h4>Property Listing Portal</h4><p>Search, filter, and list properties with maps, image galleries, and enquiry forms.</p><div class="project-tags"><span class="pt">React</span><span class="pt">Google Maps</span><span class="pt">MongoDB</span></div></div></div>
+      <div class="project-card"><div class="project-thumb" style="background:#fff7ed;">🚀</div><div class="project-body"><h4>Portfolio + Blog CMS</h4><p>Deployed personal portfolio with a headless CMS blog — hosted live on AWS.</p><div class="project-tags"><span class="pt">React</span><span class="pt">AWS S3</span><span class="pt">Nginx</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="container">
+    <h2>Start Building Today</h2>
+    <p>Enrol in our Full Stack Web Development programme and ship your first app within weeks.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-primary">Enrol Now <i class="fas fa-arrow-right"></i></a>
+      <a href="courses.html" class="btn-outline-white">View All Courses</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="ngwt.png" alt="New Wings Technology" class="footer-logo"/>
+      <p>Premier IT training institute in Avadi, Chennai — bridging education and industry since 2015.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="courses.html">Courses</a></li><li><a href="placement.html">Placement</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Our Services</h4><ul><li><a href="service-internship.html">Internship Programs</a></li><li><a href="service-fyp.html">Final Year Projects</a></li><li><a href="service-corporate.html">Corporate Training</a></li><li><a href="service-placement.html">Placement Support</a></li><li><a href="service-digital-marketing.html">Digital Marketing</a></li></ul></div>
+    <div class="footer-col"><h4>Get in Touch</h4>
+      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p>19/1, Kamaraj Nagar Main Road, Avadi, Chennai-600071<br/><span class="landmark">First Floor of Apollo Pharmacy</span></p></div>
+      <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><p>09384818257</p></div>
+      <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>admin@ngwt.in</p></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="footerYear"></span> New Wings Technology. All rights reserved.</p></div>
+</footer>
+<script>
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  const hamburger = document.getElementById('hamburger');
+  const navLinksEl = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinksEl.classList.toggle('open'));
+  navLinksEl.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinksEl.classList.remove('open')));
+</script>
+</body>
+</html>

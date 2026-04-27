@@ -1,0 +1,21 @@
+# ================================================
+# robots.txt — New Wings Technology
+# https://www.newwingstechnology.com
+# ================================================
+
+User-agent: *
+
+# Allow all public pages
+Allow: /
+Allow: /index.html
+Allow: /portal.html
+
+# Block admin panel from being indexed by search engines
+Disallow: /admin.html
+
+# Block common junk paths
+Disallow: /cgi-bin/
+Disallow: /*.php$
+
+# Sitemap location
+Sitemap: https://www.newwingstechnology.com/sitemap.xml

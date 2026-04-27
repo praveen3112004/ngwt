@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corporate Training | New Wings Technology – Avadi, Chennai</title>
+  <meta name="description" content="New Wings Technology provides customised corporate IT training for companies in Chennai. Upskill your workforce with flexible on-site and online training programmes."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.newwingstechnology.com/service-corporate.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--blue:#1a9de8;--blue-dark:#0a7ec0;--yellow:#f5c500;--yellow-dark:#d4a800;--orange:#f97316;--text:#1a1a2e;--text-muted:#6b7280;--bg-light:#f8faff;--white:#ffffff;--border:#e5e7eb;--shadow:0 4px 24px rgba(0,0,0,0.07);--shadow-lg:0 12px 48px rgba(0,0,0,0.13);--radius:18px;}
+    html{scroll-behavior:smooth;}body{font-family:'Poppins',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}img{max-width:100%;display:block;}ul{list-style:none;}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px;}
+    .highlight{color:var(--blue);}
+    .section-badge{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:2px;color:var(--blue);border:1.5px solid var(--blue);border-radius:100px;padding:4px 16px;margin-bottom:16px;text-transform:uppercase;}
+    .section-title{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.25;color:var(--text);margin-bottom:16px;}
+    .navbar{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(229,231,235,0.8);z-index:1000;transition:box-shadow .3s;}
+    .navbar.scrolled{box-shadow:var(--shadow);}
+    .nav-container{max-width:1300px;margin:0 auto;padding:0 32px;height:108px;display:flex;align-items:center;gap:40px;}
+    .nav-logo{display:flex;align-items:center;background:#fff;padding:4px 14px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.13);}
+    .logo-img{height:95px;width:auto;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));}
+    .nav-links{display:flex;align-items:center;gap:36px;margin-left:auto;}
+    .nav-link{font-size:.91rem;font-weight:500;color:var(--text-muted);transition:color .2s;position:relative;}
+    .nav-link::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--blue);transform:scaleX(0);transition:transform .2s;}
+    .nav-link:hover,.nav-link.active{color:var(--blue);}
+    .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);}
+    .btn-portal{display:flex;align-items:center;gap:8px;background:var(--yellow);color:var(--text);font-size:.9rem;font-weight:700;padding:11px 22px;border-radius:8px;white-space:nowrap;transition:background .2s,transform .2s;}
+    .btn-portal:hover{background:var(--yellow-dark);transform:translateY(-1px);}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;margin-left:auto;}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;}
+
+    .page-hero{padding:148px 24px 80px;background:linear-gradient(135deg,#1a1a0d 0%,#7c3a00 50%,#1a9de8 100%);text-align:center;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:700px;height:350px;background:radial-gradient(ellipse,rgba(255,255,255,0.08) 0%,transparent 70%);pointer-events:none;}
+    .hero-badge{display:inline-block;background:rgba(249,115,22,.15);border:1.5px solid var(--orange);color:var(--orange);font-size:.72rem;font-weight:700;letter-spacing:2px;border-radius:100px;padding:5px 18px;margin-bottom:20px;text-transform:uppercase;}
+    .page-hero h1{font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:800;color:#fff;margin-bottom:16px;}
+    .page-hero p{font-size:1rem;color:rgba(255,255,255,.8);max-width:640px;margin:0 auto 32px;line-height:1.7;}
+    .page-hero .breadcrumb{font-size:.88rem;color:rgba(255,255,255,0.6);}
+    .page-hero .breadcrumb a{color:var(--yellow);}
+    .hero-stats{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;margin-top:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.15);}
+    .hero-stat strong{display:block;font-size:2rem;font-weight:800;color:var(--yellow);}
+    .hero-stat span{font-size:.82rem;color:rgba(255,255,255,.7);}
+
+    /* WHY */
+    .why-section{padding:96px 0;background:var(--bg-light);}
+    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+    .why-list{display:flex;flex-direction:column;gap:20px;}
+    .why-item{display:flex;gap:16px;background:#fff;border-radius:14px;padding:22px;box-shadow:var(--shadow);}
+    .why-icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--orange),#ea580c);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .why-icon i{color:#fff;font-size:.95rem;}
+    .why-item h4{font-size:.92rem;font-weight:700;margin-bottom:5px;}
+    .why-item p{font-size:.83rem;color:var(--text-muted);line-height:1.55;}
+    .why-visual{background:linear-gradient(135deg,#fff7ed,#fed7aa);border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:16px;}
+    .stat-block{background:#fff;border-radius:14px;padding:20px 24px;box-shadow:var(--shadow);}
+    .stat-block strong{display:block;font-size:2rem;font-weight:800;color:var(--orange);}
+    .stat-block span{font-size:.82rem;color:var(--text-muted);}
+
+    /* TRAINING AREAS */
+    .training-areas{padding:80px 0;background:var(--white);}
+    .areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;}
+    .area-card{background:var(--bg-light);border-radius:var(--radius);padding:32px 28px;border:1.5px solid var(--border);transition:all .3s;}
+    .area-card:hover{border-color:var(--blue);background:#fff;box-shadow:var(--shadow-lg);transform:translateY(-4px);}
+    .area-card i{font-size:1.5rem;color:var(--blue);margin-bottom:16px;}
+    .area-card h4{font-size:1rem;font-weight:700;margin-bottom:10px;}
+    .area-card p{font-size:.85rem;color:var(--text-muted);line-height:1.65;}
+
+    /* DELIVERY */
+    .delivery{padding:80px 0;background:var(--bg-light);}
+    .delivery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px;}
+    .del-card{background:#fff;border-radius:var(--radius);padding:36px 28px;text-align:center;box-shadow:var(--shadow);}
+    .del-card i{font-size:2rem;color:var(--blue);margin-bottom:16px;}
+    .del-card h4{font-size:1rem;font-weight:700;margin-bottom:10px;}
+    .del-card p{font-size:.875rem;color:var(--text-muted);line-height:1.65;}
+
+    .cta-strip{padding:80px 0;background:linear-gradient(135deg,#0f1e3d,#0d1117);text-align:center;}
+    .cta-strip h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-strip p{color:rgba(255,255,255,.7);font-size:.95rem;margin-bottom:32px;}
+    .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:600;padding:13px 30px;border-radius:8px;border:none;cursor:pointer;transition:background .2s,transform .2s;}
+    .btn-primary:hover{background:var(--blue-dark);transform:translateY(-2px);}
+    .btn-outline-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:600;padding:12px 28px;border-radius:8px;border:2px solid rgba(255,255,255,.5);cursor:pointer;transition:all .2s;}
+    .btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:#fff;}
+    .footer{background:#0d1117;color:rgba(255,255,255,.75);padding:72px 0 0;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .footer-brand .footer-logo{height:90px;margin-bottom:20px;}
+    .footer-brand p{font-size:.85rem;line-height:1.75;color:rgba(255,255,255,.55);margin-bottom:24px;max-width:280px;}
+    .social-links{display:flex;gap:12px;}
+    .social-links a{width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:rgba(255,255,255,.7);transition:all .2s;}
+    .social-links a:hover{background:var(--blue);border-color:var(--blue);color:#fff;}
+    .footer-col h4{font-size:1rem;font-weight:700;color:var(--yellow);margin-bottom:20px;}
+    .footer-col ul{display:flex;flex-direction:column;gap:10px;}
+    .footer-col a{font-size:.875rem;color:rgba(255,255,255,.55);transition:color .2s;}
+    .footer-col a:hover{color:var(--blue);}
+    .footer-contact-item{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start;}
+    .footer-contact-item i{color:var(--blue);font-size:.9rem;margin-top:3px;flex-shrink:0;}
+    .footer-contact-item p{font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.5;}
+    .landmark{color:var(--yellow-dark);font-size:.82rem;}
+    .footer-bottom{text-align:center;padding:20px;font-size:.83rem;color:rgba(255,255,255,.4);}
+    @media(max-width:1024px){.why-grid{grid-template-columns:1fr;}.areas-grid{grid-template-columns:1fr 1fr;}.delivery-grid{grid-template-columns:1fr 1fr;}.footer-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:768px){.nav-links,.btn-portal{display:none;}.hamburger{display:flex;}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:108px;left:0;right:0;background:#fff;padding:24px;gap:20px;border-bottom:1px solid var(--border);box-shadow:var(--shadow-lg);}.areas-grid{grid-template-columns:1fr;}.delivery-grid{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="ngwt.png" alt="New Wings Technology" class="logo-img"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="services.html" class="nav-link active">Services</a></li>
+      <li><a href="courses.html" class="nav-link">Courses</a></li>
+      <li><a href="placement.html" class="nav-link">Placement</a></li>
+      <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="portal.html" class="btn-portal">Student Portal <i class="fas fa-arrow-right"></i></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-badge">For Companies &amp; Organisations</div>
+  <h1>Corporate Training</h1>
+  <p>Customised IT upskilling programmes for your entire team — delivered at your premises or online, on your schedule, to your exact requirements.</p>
+  <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="services.html">Services</a> &rsaquo; Corporate Training</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>30+</strong><span>Companies Trained</span></div>
+    <div class="hero-stat"><strong>1000+</strong><span>Employees Upskilled</span></div>
+    <div class="hero-stat"><strong>100%</strong><span>Custom Curriculum</span></div>
+    <div class="hero-stat"><strong>On-Site</strong><span>&amp; Online Delivery</span></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why-section">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <div class="section-badge">WHY CHOOSE US</div>
+        <h2 class="section-title">Built Around <span class="highlight">Your Business Needs</span></h2>
+        <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;margin-bottom:32px;">Every corporate training engagement starts with a deep discovery session. We understand your team's current skill gaps, your technology stack, and your business goals — then design a programme specifically for you. No generic content, no wasted time.</p>
+        <div class="why-list">
+          <div class="why-item"><div class="why-icon"><i class="fas fa-sliders-h"></i></div><div><h4>100% Customised Curriculum</h4><p>We don't use off-the-shelf slides. Every module is designed for your team, your tools, and your industry.</p></div></div>
+          <div class="why-item"><div class="why-icon"><i class="fas fa-clock"></i></div><div><h4>Flexible Scheduling</h4><p>Weekend batches, evening sessions, intensive boot camps, or multi-week programmes — your call.</p></div></div>
+          <div class="why-item"><div class="why-icon"><i class="fas fa-chart-bar"></i></div><div><h4>Progress Reporting</h4><p>Detailed pre- and post-training assessments, with progress reports delivered to HR or management.</p></div></div>
+        </div>
+      </div>
+      <div class="why-visual">
+        <div class="stat-block"><strong>40%</strong><span>Average productivity improvement reported by our corporate clients post-training.</span></div>
+        <div class="stat-block"><strong>2x</strong><span>Faster project delivery when teams are trained on the right tools.</span></div>
+        <div class="stat-block"><strong>30+</strong><span>Companies in Chennai and Tamil Nadu have trusted us for upskilling.</span></div>
+        <div class="stat-block"><strong>NPS 92</strong><span>Net Promoter Score from post-training surveys — our trainers are rated excellent.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING AREAS -->
+<section class="training-areas">
+  <div class="container" style="text-align:center;">
+    <div class="section-badge">TRAINING AREAS</div>
+    <h2 class="section-title">What We Can <span class="highlight">Train Your Team On</span></h2>
+    <div class="areas-grid">
+      <div class="area-card"><i class="fas fa-cloud"></i><h4>Cloud & DevOps</h4><p>AWS, Azure, GCP, Docker, Kubernetes, CI/CD pipelines, and infrastructure as code with Terraform.</p></div>
+      <div class="area-card"><i class="fas fa-brain"></i><h4>AI & Machine Learning</h4><p>Applied AI for business, Python ML libraries, model deployment, and LLM integration for enterprise teams.</p></div>
+      <div class="area-card"><i class="fas fa-shield-alt"></i><h4>Cybersecurity Awareness</h4><p>Security best practices, phishing defence, GDPR compliance, and secure coding for non-technical staff.</p></div>
+      <div class="area-card"><i class="fas fa-code"></i><h4>Software Development</h4><p>Agile development, React, Node.js, Java Spring Boot, database design, and API integration.</p></div>
+      <div class="area-card"><i class="fas fa-chart-pie"></i><h4>Data Analytics</h4><p>Excel advanced, Power BI, SQL, Python data analysis, and dashboard design for business teams.</p></div>
+      <div class="area-card"><i class="fas fa-bullhorn"></i><h4>Digital Marketing</h4><p>SEO, social media strategy, Google Ads, email marketing, and analytics for marketing departments.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY -->
+<section class="delivery">
+  <div class="container" style="text-align:center;">
+    <div class="section-badge">DELIVERY OPTIONS</div>
+    <h2 class="section-title">Training On <span class="highlight">Your Terms</span></h2>
+    <div class="delivery-grid">
+      <div class="del-card"><i class="fas fa-building"></i><h4>On-Site at Your Office</h4><p>Our trainer comes to your premises with all materials. Ideal for teams of 10 or more. Minimises downtime and travel costs.</p></div>
+      <div class="del-card"><i class="fas fa-laptop"></i><h4>Online / Virtual</h4><p>Live instructor-led sessions over Zoom or Teams. Participants join from anywhere. Recordings provided for later review.</p></div>
+      <div class="del-card"><i class="fas fa-map-marker-alt"></i><h4>At Our Training Centre</h4><p>Teams visit our Avadi facility. Ideal for smaller groups who benefit from a dedicated learning environment away from distractions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="container">
+    <h2>Ready to Upskill Your Team?</h2>
+    <p>Get in touch for a free consultation and custom training proposal within 48 hours.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-primary">Request a Proposal <i class="fas fa-arrow-right"></i></a>
+      <a href="services.html" class="btn-outline-white">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="ngwt.png" alt="New Wings Technology" class="footer-logo"/>
+      <p>Premier IT training institute in Avadi, Chennai — bridging education and industry since 2015.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="courses.html">Courses</a></li><li><a href="placement.html">Placement</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Our Services</h4><ul><li><a href="service-internship.html">Internship Programs</a></li><li><a href="service-fyp.html">Final Year Projects</a></li><li><a href="service-corporate.html">Corporate Training</a></li><li><a href="service-placement.html">Placement Support</a></li><li><a href="service-digital-marketing.html">Digital Marketing</a></li></ul></div>
+    <div class="footer-col"><h4>Get in Touch</h4>
+      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p>19/1, Kamaraj Nagar Main Road, Avadi, Chennai-600071<br/><span class="landmark">First Floor of Apollo Pharmacy</span></p></div>
+      <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><p>09384818257</p></div>
+      <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>admin@ngwt.in</p></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="footerYear"></span> New Wings Technology. All rights reserved.</p></div>
+</footer>
+<script>
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  const hamburger = document.getElementById('hamburger');
+  const navLinksEl = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinksEl.classList.toggle('open'));
+  navLinksEl.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinksEl.classList.remove('open')));
+</script>
+</body>
+</html>

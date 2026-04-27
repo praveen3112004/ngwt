@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses | New Wings Technology</title>
+  <meta name="description" content="Explore certified IT courses at New Wings Technology — AI & ML, Full Stack, AWS Cloud, Python, Cybersecurity, Data Science. Industry-expert led training in Chennai."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.newwingstechnology.com/courses.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root { --blue:#1a9de8; --blue-dark:#0a7ec0; --yellow:#f5c500; --yellow-dark:#d4a800; --text:#1a1a2e; --text-muted:#6b7280; --bg-light:#f8faff; --white:#ffffff; --border:#e5e7eb; --shadow:0 4px 24px rgba(0,0,0,0.07); --shadow-lg:0 12px 48px rgba(0,0,0,0.13); --radius:18px; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--white); overflow-x:hidden; }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; display:block; }
+    ul { list-style:none; }
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    .highlight { color:var(--blue); }
+    .section-badge { display:inline-block; font-size:.72rem; font-weight:600; letter-spacing:2px; color:var(--blue); border:1.5px solid var(--blue); border-radius:100px; padding:4px 16px; margin-bottom:16px; text-transform:uppercase; }
+    .section-title { font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:800; line-height:1.25; color:var(--text); margin-bottom:16px; }
+
+    .navbar { position:fixed; top:0; left:0; right:0; background:rgba(255,255,255,0.97); backdrop-filter:blur(12px); border-bottom:1px solid rgba(229,231,235,0.8); z-index:1000; transition:box-shadow .3s; }
+    .navbar.scrolled { box-shadow:var(--shadow); }
+    .nav-container { max-width:1300px; margin:0 auto; padding:0 32px; height:108px; display:flex; align-items:center; gap:40px; }
+    .nav-logo { display:flex; align-items:center; background:#fff; padding:4px 14px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.13); }
+    .logo-img { height:95px; width:auto; object-fit:contain; filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15)); }
+    .nav-links { display:flex; align-items:center; gap:36px; margin-left:auto; }
+    .nav-link { font-size:.91rem; font-weight:500; color:var(--text-muted); transition:color .2s; position:relative; }
+    .nav-link::after { content:''; position:absolute; bottom:-4px; left:0; right:0; height:2px; background:var(--blue); transform:scaleX(0); transition:transform .2s; }
+    .nav-link:hover,.nav-link.active { color:var(--blue); }
+    .nav-link:hover::after,.nav-link.active::after { transform:scaleX(1); }
+    .btn-portal { display:flex; align-items:center; gap:8px; background:var(--yellow); color:var(--text); font-size:.9rem; font-weight:700; padding:11px 22px; border-radius:8px; white-space:nowrap; transition:background .2s,transform .2s; }
+    .btn-portal:hover { background:var(--yellow-dark); transform:translateY(-1px); }
+    .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; margin-left:auto; }
+    .hamburger span { display:block; width:24px; height:2px; background:var(--text); border-radius:2px; }
+
+    .page-hero { padding:148px 24px 72px; background:linear-gradient(135deg,#0f1e3d 0%,#1a9de8 100%); text-align:center; position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; top:-80px; left:50%; transform:translateX(-50%); width:700px; height:350px; background:radial-gradient(ellipse,rgba(255,255,255,0.07) 0%,transparent 70%); pointer-events:none; }
+    .page-hero h1 { font-size:clamp(2rem,4vw,3rem); font-weight:800; color:#fff; margin-bottom:12px; position:relative; }
+    .page-hero .breadcrumb { font-size:.88rem; color:rgba(255,255,255,0.7); position:relative; }
+    .page-hero .breadcrumb a { color:var(--yellow); }
+
+    .courses-section { padding:96px 0; background:var(--white); }
+    .courses-intro { text-align:center; margin-bottom:60px; }
+    .courses-intro p { color:var(--text-muted); max-width:600px; margin:0 auto; font-size:.95rem; line-height:1.7; }
+    .courses-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .course-card { background:#fff; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); border:1.5px solid var(--border); transition:transform .3s,box-shadow .3s; }
+    .course-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-lg); }
+    .course-img img { width:100%; height:200px; object-fit:cover; }
+    .course-body { padding:24px 24px 28px; }
+    .course-body h3 { font-size:1.1rem; font-weight:700; margin-bottom:12px; }
+    .course-meta { display:flex; gap:16px; margin-bottom:16px; flex-wrap:wrap; }
+    .course-meta span { display:flex; align-items:center; gap:6px; font-size:.82rem; color:var(--text-muted); }
+    .course-meta i { color:var(--blue); }
+    .course-desc { font-size:.88rem; color:var(--text-muted); line-height:1.65; margin-bottom:16px; }
+    .course-topics { margin-bottom:20px; }
+    .course-topic { display:flex; align-items:center; gap:8px; font-size:.82rem; color:var(--text-muted); padding:3px 0; }
+    .course-topic i { color:var(--blue); font-size:.75rem; }
+    .btn-enquire { display:flex; align-items:center; gap:8px; justify-content:center; width:100%; padding:12px; background:var(--blue); color:#fff; border:none; border-radius:8px; font-family:'Poppins',sans-serif; font-size:.9rem; font-weight:700; cursor:pointer; transition:background .2s; text-decoration:none; }
+    .btn-enquire:hover { background:var(--blue-dark); }
+
+    .cta-strip { padding:72px 0; background:linear-gradient(135deg,#0f1e3d,#0d1117); text-align:center; }
+    .cta-strip h2 { font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; color:#fff; margin-bottom:12px; }
+    .cta-strip p { color:rgba(255,255,255,.7); font-size:.95rem; margin-bottom:32px; }
+    .btn-outline-white { display:inline-flex; align-items:center; gap:8px; background:transparent; color:#fff; font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; padding:12px 28px; border-radius:8px; border:2px solid rgba(255,255,255,.5); cursor:pointer; transition:background .2s,border-color .2s; }
+    .btn-outline-white:hover { background:rgba(255,255,255,.1); border-color:#fff; }
+    .cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+    .footer { background:#0d1117; color:rgba(255,255,255,.75); padding:72px 0 0; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:48px; padding-bottom:56px; border-bottom:1px solid rgba(255,255,255,.08); }
+    .footer-brand .footer-logo { height:90px; margin-bottom:20px; }
+    .footer-brand p { font-size:.85rem; line-height:1.75; color:rgba(255,255,255,.55); margin-bottom:24px; max-width:280px; }
+    .social-links { display:flex; gap:12px; }
+    .social-links a { width:38px; height:38px; border-radius:50%; border:1.5px solid rgba(255,255,255,.2); display:flex; align-items:center; justify-content:center; font-size:.9rem; color:rgba(255,255,255,.7); transition:all .2s; }
+    .social-links a:hover { background:var(--blue); border-color:var(--blue); color:#fff; }
+    .footer-col h4 { font-size:1rem; font-weight:700; color:var(--yellow); margin-bottom:20px; }
+    .footer-col ul { display:flex; flex-direction:column; gap:10px; }
+    .footer-col a { font-size:.875rem; color:rgba(255,255,255,.55); transition:color .2s; }
+    .footer-col a:hover { color:var(--blue); }
+    .footer-contact-item { display:flex; gap:12px; margin-bottom:16px; align-items:flex-start; }
+    .footer-contact-item i { color:var(--blue); font-size:.9rem; margin-top:3px; flex-shrink:0; }
+    .footer-contact-item p { font-size:.85rem; color:rgba(255,255,255,.55); line-height:1.5; }
+    .landmark { color:var(--yellow-dark); font-size:.82rem; }
+    .footer-bottom { text-align:center; padding:20px; font-size:.83rem; color:rgba(255,255,255,.4); }
+
+    @media (max-width:1024px) { .courses-grid { grid-template-columns:repeat(2,1fr); } .footer-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:768px) { .nav-links,.btn-portal { display:none; } .hamburger { display:flex; } .nav-links.open { display:flex; flex-direction:column; position:fixed; top:108px; left:0; right:0; background:#fff; padding:24px; gap:20px; border-bottom:1px solid var(--border); box-shadow:var(--shadow-lg); } .courses-grid { grid-template-columns:1fr; } .footer-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="ngwt.png" alt="New Wings Technology" class="logo-img"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"     class="nav-link">Home</a></li>
+      <li><a href="about.html"     class="nav-link">About Us</a></li>
+      <li><a href="services.html"  class="nav-link">Services</a></li>
+      <li><a href="courses.html"   class="nav-link active">Courses</a></li>
+      <li><a href="placement.html" class="nav-link">Placement</a></li>
+      <li><a href="reviews.html"   class="nav-link">Reviews</a></li>
+      <li><a href="contact.html"   class="nav-link">Contact</a></li>
+    </ul>
+    <a href="portal.html" class="btn-portal">Student Portal <i class="fas fa-arrow-right"></i></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <h1>Our Courses</h1>
+  <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Courses</p>
+</section>
+
+<section class="courses-section">
+  <div class="container">
+    <div class="courses-intro">
+      <div class="section-badge">OUR COURSES</div>
+      <h2 class="section-title">Explore Our Top <span class="highlight">Certified Programs</span></h2>
+      <p>Industry-relevant curriculum designed by experts to help you crack your dream job. All courses include live projects and placement support.</p>
+    </div>
+    <div class="courses-grid">
+
+      <div class="course-card">
+        <div class="course-img"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=300&fit=crop" alt="AI & ML"/></div>
+        <div class="course-body">
+          <h3>AI & ML Specialization</h3>
+          <div class="course-meta">
+            <span><i class="fas fa-clock"></i> 6 Months</span>
+            <span><i class="fas fa-certificate"></i> Certified</span>
+            <span><i class="fas fa-users"></i> 20 Seats</span>
+          </div>
+          <p class="course-desc">Deep dive into machine learning, neural networks and real-world AI applications with hands-on Python projects.</p>
+          <div class="course-topics">
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Python & NumPy / Pandas</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Machine Learning Algorithms</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Deep Learning & NLP</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Capstone Project</div>
+          </div>
+          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-img"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=300&fit=crop" alt="Full Stack"/></div>
+        <div class="course-body">
+          <h3>Full Stack Engineer</h3>
+          <div class="course-meta">
+            <span><i class="fas fa-clock"></i> 4 Months</span>
+            <span><i class="fas fa-certificate"></i> Certified</span>
+            <span><i class="fas fa-users"></i> 30 Seats</span>
+          </div>
+          <p class="course-desc">Build complete web applications from front to back with React, Node.js and MongoDB. Deploy real projects.</p>
+          <div class="course-topics">
+            <div class="course-topic"><i class="fas fa-check-circle"></i> HTML, CSS, JavaScript</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> React.js</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Node.js & Express</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> MongoDB & Deployment</div>
+          </div>
+          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-img"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=300&fit=crop" alt="AWS Cloud"/></div>
+        <div class="course-body">
+          <h3>AWS Cloud Architect</h3>
+          <div class="course-meta">
+            <span><i class="fas fa-clock"></i> 3 Months</span>
+            <span><i class="fas fa-certificate"></i> Certified</span>
+            <span><i class="fas fa-users"></i> 25 Seats</span>
+          </div>
+          <p class="course-desc">Architect, deploy and manage scalable cloud solutions on AWS. Prepare for the AWS Solutions Architect exam.</p>
+          <div class="course-topics">
+            <div class="course-topic"><i class="fas fa-check-circle"></i> EC2, S3, VPC & IAM</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> RDS & DynamoDB</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Lambda & Serverless</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Certification Prep</div>
+          </div>
+          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-img"><img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600&h=300&fit=crop" alt="Python"/></div>
+        <div class="course-body">
+          <h3>Python Development</h3>
+          <div class="course-meta">
+            <span><i class="fas fa-clock"></i> 2 Months</span>
+            <span><i class="fas fa-certificate"></i> Certified</span>
+            <span><i class="fas fa-users"></i> 30 Seats</span>
+          </div>
+          <p class="course-desc">From fundamentals to advanced Python programming with real-world automation and scripting projects.</p>
+          <div class="course-topics">
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Python Fundamentals</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> OOP & File Handling</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Django Basics</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Automation Projects</div>
+          </div>
+          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-img"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=300&fit=crop" alt="Cybersecurity"/></div>
+        <div class="course-body">
+          <h3>Cybersecurity Essentials</h3>
+          <div class="course-meta">
+            <span><i class="fas fa-clock"></i> 3 Months</span>
+            <span><i class="fas fa-certificate"></i> Certified</span>
+            <span><i class="fas fa-users"></i> 20 Seats</span>
+          </div>
+          <p class="course-desc">Master ethical hacking, network security, and vulnerability assessment with hands-on lab sessions.</p>
+          <div class="course-topics">
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Network Security</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Ethical Hacking</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> VAPT Techniques</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Security Compliance</div>
+          </div>
+          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-img"><img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=300&fit=crop" alt="Data Science"/></div>
+        <div class="course-body">
+          <h3>Data Science & Analytics</h3>
+          <div class="course-meta">
+            <span><i class="fas fa-clock"></i> 4 Months</span>
+            <span><i class="fas fa-certificate"></i> Certified</span>
+            <span><i class="fas fa-users"></i> 25 Seats</span>
+          </div>
+          <p class="course-desc">Turn data into insights using Python, SQL, Tableau and Power BI. Work on real datasets from Day 1.</p>
+          <div class="course-topics">
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Python & SQL</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Data Visualization</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Power BI & Tableau</div>
+            <div class="course-topic"><i class="fas fa-check-circle"></i> Business Analytics Project</div>
+          </div>
+          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="container">
+    <h2>Not Sure Which Course to Pick?</h2>
+    <p>Our counselors will guide you to the right program based on your background and goals.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-enquire" style="border-radius:8px;padding:13px 30px;">Talk to a Counselor <i class="fas fa-arrow-right"></i></a>
+      <a href="placement.html" class="btn-outline-white">See Placement Stats</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="ngwt.png" alt="New Wings Technology" class="footer-logo"/>
+      <p>Premier IT training institute in Avadi, Chennai — bridging education and industry since 2015.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="courses.html">Courses</a></li><li><a href="placement.html">Placement</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Our Services</h4><ul><li><a href="services.html">Internship Programs</a></li><li><a href="services.html">Final Year Projects</a></li><li><a href="services.html">Corporate Training</a></li><li><a href="placement.html">Placement Support</a></li><li><a href="services.html">Digital Marketing</a></li></ul></div>
+    <div class="footer-col"><h4>Get in Touch</h4>
+      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p>19/1, Kamaraj Nagar Main Road, Avadi, Chennai-600071<br/><span class="landmark">Landmark: First Floor of Apollo Pharmacy</span></p></div>
+      <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><p>09384818257</p></div>
+      <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>admin@ngwt.in</p></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="footerYear"></span> New Wings Technology. All rights reserved.</p></div>
+</footer>
+<script>
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  const hamburger = document.getElementById('hamburger');
+  const navLinksEl = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinksEl.classList.toggle('open'));
+  navLinksEl.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinksEl.classList.remove('open')));
+</script>
+</body>
+</html>

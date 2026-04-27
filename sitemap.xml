@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ════════════════════════════════════════
+       New Wings Technology — XML Sitemap
+       Submit to: https://search.google.com/search-console
+       Domain: www.newwingstechnology.com
+  ════════════════════════════════════════ -->
+
+  <!-- HOMEPAGE -->
+  <url>
+    <loc>https://www.newwingstechnology.com/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ABOUT -->
+  <url>
+    <loc>https://www.newwingstechnology.com/about.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- SERVICES -->
+  <url>
+    <loc>https://www.newwingstechnology.com/services.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- COURSES (high priority — main conversion page) -->
+  <url>
+    <loc>https://www.newwingstechnology.com/courses.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- PLACEMENT -->
+  <url>
+    <loc>https://www.newwingstechnology.com/placement.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- REVIEWS -->
+  <url>
+    <loc>https://www.newwingstechnology.com/reviews.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- CONTACT -->
+  <url>
+    <loc>https://www.newwingstechnology.com/contact.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- STUDENT PORTAL -->
+  <url>
+    <loc>https://www.newwingstechnology.com/portal.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

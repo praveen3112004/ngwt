@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Internship Programs | New Wings Technology – Avadi, Chennai</title>
+  <meta name="description" content="Join New Wings Technology's industry internship programs in Chennai. Work on live projects, earn experience letters, and launch your IT career before graduation."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.newwingstechnology.com/service-internship.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root { --blue:#1a9de8; --blue-dark:#0a7ec0; --yellow:#f5c500; --yellow-dark:#d4a800; --text:#1a1a2e; --text-muted:#6b7280; --bg-light:#f8faff; --white:#ffffff; --border:#e5e7eb; --shadow:0 4px 24px rgba(0,0,0,0.07); --shadow-lg:0 12px 48px rgba(0,0,0,0.13); --radius:18px; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--white); overflow-x:hidden; }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; display:block; }
+    ul { list-style:none; }
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    .highlight { color:var(--blue); }
+    .section-badge { display:inline-block; font-size:.72rem; font-weight:600; letter-spacing:2px; color:var(--blue); border:1.5px solid var(--blue); border-radius:100px; padding:4px 16px; margin-bottom:16px; text-transform:uppercase; }
+    .section-title { font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:800; line-height:1.25; color:var(--text); margin-bottom:16px; }
+
+    /* NAV */
+    .navbar { position:fixed; top:0; left:0; right:0; background:rgba(255,255,255,0.97); backdrop-filter:blur(12px); border-bottom:1px solid rgba(229,231,235,0.8); z-index:1000; transition:box-shadow .3s; }
+    .navbar.scrolled { box-shadow:var(--shadow); }
+    .nav-container { max-width:1300px; margin:0 auto; padding:0 32px; height:108px; display:flex; align-items:center; gap:40px; }
+    .nav-logo { display:flex; align-items:center; background:#fff; padding:4px 14px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.13); }
+    .logo-img { height:95px; width:auto; object-fit:contain; filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15)); }
+    .nav-links { display:flex; align-items:center; gap:36px; margin-left:auto; }
+    .nav-link { font-size:.91rem; font-weight:500; color:var(--text-muted); transition:color .2s; position:relative; }
+    .nav-link::after { content:''; position:absolute; bottom:-4px; left:0; right:0; height:2px; background:var(--blue); transform:scaleX(0); transition:transform .2s; }
+    .nav-link:hover,.nav-link.active { color:var(--blue); }
+    .nav-link:hover::after,.nav-link.active::after { transform:scaleX(1); }
+    .btn-portal { display:flex; align-items:center; gap:8px; background:var(--yellow); color:var(--text); font-size:.9rem; font-weight:700; padding:11px 22px; border-radius:8px; white-space:nowrap; transition:background .2s,transform .2s; }
+    .btn-portal:hover { background:var(--yellow-dark); transform:translateY(-1px); }
+    .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; margin-left:auto; }
+    .hamburger span { display:block; width:24px; height:2px; background:var(--text); border-radius:2px; }
+
+    /* HERO */
+    .page-hero { padding:148px 24px 80px; background:linear-gradient(135deg,#0f1e3d 0%,#0a7ec0 60%,#f5c500 100%); text-align:center; position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; top:-80px; left:50%; transform:translateX(-50%); width:700px; height:350px; background:radial-gradient(ellipse,rgba(255,255,255,0.08) 0%,transparent 70%); pointer-events:none; }
+    .hero-badge { display:inline-block; background:rgba(245,197,0,.2); border:1.5px solid var(--yellow); color:var(--yellow); font-size:.72rem; font-weight:700; letter-spacing:2px; border-radius:100px; padding:5px 18px; margin-bottom:20px; text-transform:uppercase; }
+    .page-hero h1 { font-size:clamp(2.2rem,4.5vw,3.4rem); font-weight:800; color:#fff; margin-bottom:16px; position:relative; }
+    .page-hero p { font-size:1rem; color:rgba(255,255,255,.8); max-width:640px; margin:0 auto 32px; line-height:1.7; }
+    .page-hero .breadcrumb { font-size:.88rem; color:rgba(255,255,255,0.6); margin-top:16px; }
+    .page-hero .breadcrumb a { color:var(--yellow); }
+    .hero-stats { display:flex; gap:48px; justify-content:center; flex-wrap:wrap; margin-top:48px; padding-top:40px; border-top:1px solid rgba(255,255,255,.15); }
+    .hero-stat strong { display:block; font-size:2rem; font-weight:800; color:var(--yellow); }
+    .hero-stat span { font-size:.82rem; color:rgba(255,255,255,.7); }
+
+    /* OVERVIEW */
+    .overview { padding:96px 0; background:var(--bg-light); }
+    .overview-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+    .overview-visual { background:linear-gradient(135deg,#e8f4fd,#d0eaff); border-radius:24px; padding:48px; display:flex; flex-direction:column; gap:20px; }
+    .ov-item { background:#fff; border-radius:14px; padding:20px 24px; display:flex; gap:16px; align-items:flex-start; box-shadow:var(--shadow); }
+    .ov-icon { width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,var(--blue),var(--blue-dark)); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .ov-icon i { color:#fff; font-size:.95rem; }
+    .ov-item h4 { font-size:.92rem; font-weight:700; margin-bottom:4px; }
+    .ov-item p { font-size:.82rem; color:var(--text-muted); line-height:1.5; }
+
+    /* WHAT YOU GET */
+    .what-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:56px; }
+    .what-card { background:#fff; border-radius:var(--radius); padding:32px 28px; box-shadow:var(--shadow); border-top:4px solid var(--blue); transition:transform .3s; }
+    .what-card:hover { transform:translateY(-6px); }
+    .what-card i { font-size:1.6rem; color:var(--blue); margin-bottom:16px; }
+    .what-card h4 { font-size:1rem; font-weight:700; margin-bottom:10px; }
+    .what-card p { font-size:.85rem; color:var(--text-muted); line-height:1.65; }
+
+    /* TIMELINE */
+    .timeline-section { padding:96px 0; background:var(--white); }
+    .timeline { display:flex; flex-direction:column; gap:0; max-width:760px; margin:56px auto 0; }
+    .tl-step { display:flex; gap:28px; padding-bottom:40px; position:relative; }
+    .tl-step:not(:last-child)::before { content:''; position:absolute; left:21px; top:52px; bottom:0; width:2px; background:linear-gradient(180deg,var(--blue),rgba(26,157,232,.1)); }
+    .tl-dot { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,var(--blue),var(--blue-dark)); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:.9rem; flex-shrink:0; box-shadow:0 4px 16px rgba(26,157,232,.35); }
+    .tl-body h4 { font-size:1rem; font-weight:700; margin-bottom:6px; margin-top:8px; }
+    .tl-body p { font-size:.875rem; color:var(--text-muted); line-height:1.65; }
+
+    /* WHO IT'S FOR */
+    .for-section { padding:80px 0; background:var(--bg-light); }
+    .for-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px; }
+    .for-card { background:#fff; border-radius:14px; padding:28px; box-shadow:var(--shadow); display:flex; gap:16px; }
+    .for-card i { font-size:1.4rem; color:var(--yellow-dark); flex-shrink:0; margin-top:2px; }
+    .for-card h4 { font-size:.92rem; font-weight:700; margin-bottom:6px; }
+    .for-card p { font-size:.83rem; color:var(--text-muted); line-height:1.55; }
+
+    /* CTA */
+    .cta-strip { padding:80px 0; background:linear-gradient(135deg,#0f1e3d,#0d1117); text-align:center; }
+    .cta-strip h2 { font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; color:#fff; margin-bottom:12px; }
+    .cta-strip p { color:rgba(255,255,255,.7); font-size:.95rem; margin-bottom:32px; }
+    .cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+    .btn-primary { display:inline-flex; align-items:center; gap:8px; background:var(--blue); color:#fff; font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; padding:13px 30px; border-radius:8px; border:none; cursor:pointer; transition:background .2s,transform .2s; }
+    .btn-primary:hover { background:var(--blue-dark); transform:translateY(-2px); }
+    .btn-outline-white { display:inline-flex; align-items:center; gap:8px; background:transparent; color:#fff; font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; padding:12px 28px; border-radius:8px; border:2px solid rgba(255,255,255,.5); cursor:pointer; transition:all .2s; }
+    .btn-outline-white:hover { background:rgba(255,255,255,.1); border-color:#fff; }
+
+    /* FOOTER */
+    .footer { background:#0d1117; color:rgba(255,255,255,.75); padding:72px 0 0; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:48px; padding-bottom:56px; border-bottom:1px solid rgba(255,255,255,.08); }
+    .footer-brand .footer-logo { height:90px; margin-bottom:20px; }
+    .footer-brand p { font-size:.85rem; line-height:1.75; color:rgba(255,255,255,.55); margin-bottom:24px; max-width:280px; }
+    .social-links { display:flex; gap:12px; }
+    .social-links a { width:38px; height:38px; border-radius:50%; border:1.5px solid rgba(255,255,255,.2); display:flex; align-items:center; justify-content:center; font-size:.9rem; color:rgba(255,255,255,.7); transition:all .2s; }
+    .social-links a:hover { background:var(--blue); border-color:var(--blue); color:#fff; }
+    .footer-col h4 { font-size:1rem; font-weight:700; color:var(--yellow); margin-bottom:20px; }
+    .footer-col ul { display:flex; flex-direction:column; gap:10px; }
+    .footer-col a { font-size:.875rem; color:rgba(255,255,255,.55); transition:color .2s; }
+    .footer-col a:hover { color:var(--blue); }
+    .footer-contact-item { display:flex; gap:12px; margin-bottom:16px; align-items:flex-start; }
+    .footer-contact-item i { color:var(--blue); font-size:.9rem; margin-top:3px; flex-shrink:0; }
+    .footer-contact-item p { font-size:.85rem; color:rgba(255,255,255,.55); line-height:1.5; }
+    .landmark { color:var(--yellow-dark); font-size:.82rem; }
+    .footer-bottom { text-align:center; padding:20px; font-size:.83rem; color:rgba(255,255,255,.4); }
+
+    @media(max-width:1024px){ .overview-grid{grid-template-columns:1fr;} .what-grid{grid-template-columns:1fr 1fr;} .for-grid{grid-template-columns:1fr 1fr;} .footer-grid{grid-template-columns:1fr 1fr;} }
+    @media(max-width:768px){ .nav-links,.btn-portal{display:none;} .hamburger{display:flex;} .nav-links.open{display:flex;flex-direction:column;position:fixed;top:108px;left:0;right:0;background:#fff;padding:24px;gap:20px;border-bottom:1px solid var(--border);box-shadow:var(--shadow-lg);} .hero-stats{gap:28px;} .what-grid{grid-template-columns:1fr;} .for-grid{grid-template-columns:1fr;} .footer-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="ngwt.png" alt="New Wings Technology" class="logo-img"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="services.html" class="nav-link active">Services</a></li>
+      <li><a href="courses.html" class="nav-link">Courses</a></li>
+      <li><a href="placement.html" class="nav-link">Placement</a></li>
+      <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="portal.html" class="btn-portal">Student Portal <i class="fas fa-arrow-right"></i></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-badge">Most Popular Program</div>
+  <h1>Internship Programs</h1>
+  <p>Gain real-world IT experience on live industry projects before you even graduate — with a verified experience letter to prove it.</p>
+  <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="services.html">Services</a> &rsaquo; Internship Programs</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>300+</strong><span>Interns Placed</span></div>
+    <div class="hero-stat"><strong>1–6</strong><span>Month Programs</span></div>
+    <div class="hero-stat"><strong>50+</strong><span>Company Partners</span></div>
+    <div class="hero-stat"><strong>100%</strong><span>Certificate Provided</span></div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="overview">
+  <div class="container">
+    <div class="overview-grid">
+      <div>
+        <div class="section-badge">PROGRAM OVERVIEW</div>
+        <h2 class="section-title">Work on <span class="highlight">Real Projects</span>, Not Just Theory</h2>
+        <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;margin-bottom:24px;">Our internship program bridges the gap between classroom learning and industry expectations. You'll be embedded in real project workflows — writing code, attending stand-ups, and solving actual business problems under the guidance of senior engineers.</p>
+        <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;">Every intern receives a verified experience letter on completion, which is recognised by our 50+ corporate hiring partners when you apply for jobs.</p>
+      </div>
+      <div class="overview-visual">
+        <div class="ov-item">
+          <div class="ov-icon"><i class="fas fa-laptop-code"></i></div>
+          <div><h4>Live Project Work</h4><p>Work on real client or product projects — not dummy exercises. Your contributions matter.</p></div>
+        </div>
+        <div class="ov-item">
+          <div class="ov-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+          <div><h4>Mentor-Led Guidance</h4><p>A senior engineer mentors you throughout, reviewing your code and helping you improve daily.</p></div>
+        </div>
+        <div class="ov-item">
+          <div class="ov-icon"><i class="fas fa-certificate"></i></div>
+          <div><h4>Verified Certificate</h4><p>Receive an industry-recognised experience letter that boosts your resume immediately.</p></div>
+        </div>
+        <div class="ov-item">
+          <div class="ov-icon"><i class="fas fa-calendar-check"></i></div>
+          <div><h4>Flexible Duration</h4><p>Choose 1, 3, or 6-month tracks to match your academic schedule or availability.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section style="padding:80px 0;background:var(--white);">
+  <div class="container" style="text-align:center;">
+    <div class="section-badge">WHAT'S INCLUDED</div>
+    <h2 class="section-title">Everything You <span class="highlight">Get</span></h2>
+    <div class="what-grid">
+      <div class="what-card"><i class="fas fa-project-diagram"></i><h4>Live Project Assignment</h4><p>You are assigned to an active project from day one. Work in a real team environment with version control, code reviews, and sprint planning.</p></div>
+      <div class="what-card"><i class="fas fa-user-tie"></i><h4>Dedicated Industry Mentor</h4><p>A professional with 5+ years experience guides you — answering technical questions, reviewing your work, and helping you build professional habits.</p></div>
+      <div class="what-card"><i class="fas fa-award"></i><h4>Experience Letter & Certificate</h4><p>On successful completion you receive a verifiable experience certificate that strengthens your job applications and LinkedIn profile.</p></div>
+      <div class="what-card"><i class="fas fa-code-branch"></i><h4>GitHub Portfolio Building</h4><p>All your internship work is committed to your personal GitHub. Leave with a live portfolio of real contributions to show employers.</p></div>
+      <div class="what-card"><i class="fas fa-comments"></i><h4>Soft Skills Coaching</h4><p>Communication, email etiquette, presentation skills, and professional conduct — covered alongside technical work.</p></div>
+      <div class="what-card"><i class="fas fa-handshake"></i><h4>Placement Referral</h4><p>Top-performing interns are directly referred to our hiring partner companies at the end of the program.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section">
+  <div class="container" style="text-align:center;">
+    <div class="section-badge">HOW IT WORKS</div>
+    <h2 class="section-title">Your <span class="highlight">Internship Journey</span></h2>
+    <div class="timeline">
+      <div class="tl-step"><div class="tl-dot">1</div><div class="tl-body"><h4>Apply & Orientation</h4><p>Submit your application online or in person. We assess your current skills and assign you to the most appropriate project track.</p></div></div>
+      <div class="tl-step"><div class="tl-dot">2</div><div class="tl-body"><h4>Onboarding & Setup</h4><p>Set up your development environment, meet your mentor and team, and get a full briefing on the project scope and your role.</p></div></div>
+      <div class="tl-step"><div class="tl-dot">3</div><div class="tl-body"><h4>Active Project Work</h4><p>Contribute to sprints, attend daily standups, complete assigned tasks, and receive weekly code reviews from your mentor.</p></div></div>
+      <div class="tl-step"><div class="tl-dot">4</div><div class="tl-body"><h4>Mid-Review</h4><p>A formal review at the halfway point evaluates your progress, identifies areas for improvement, and adjusts your tasks accordingly.</p></div></div>
+      <div class="tl-step"><div class="tl-dot">5</div><div class="tl-body"><h4>Project Presentation</h4><p>Present your completed work to the team. Build confidence in communicating technical outcomes to a professional audience.</p></div></div>
+      <div class="tl-step"><div class="tl-dot">6</div><div class="tl-body"><h4>Certificate & Placement</h4><p>Receive your verified experience certificate. Top performers are fast-tracked to our placement support program.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="for-section">
+  <div class="container" style="text-align:center;">
+    <div class="section-badge">WHO SHOULD APPLY</div>
+    <h2 class="section-title">This Program Is Perfect <span class="highlight">For You</span> If…</h2>
+    <div class="for-grid">
+      <div class="for-card"><i class="fas fa-user-graduate"></i><div><h4>Final Year Students</h4><p>Complete your internship requirement while building a real portfolio before campus placements begin.</p></div></div>
+      <div class="for-card"><i class="fas fa-laptop"></i><div><h4>Recent Graduates</h4><p>Fresher with a degree but no work experience? Bridge the gap and get job-ready in weeks.</p></div></div>
+      <div class="for-card"><i class="fas fa-exchange-alt"></i><div><h4>Career Changers</h4><p>Switching to IT from another field? Gain practical proof of your new skills employers can trust.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="container">
+    <h2>Ready to Start Your Internship?</h2>
+    <p>Apply now and start working on real industry projects within days.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-primary">Apply Now <i class="fas fa-arrow-right"></i></a>
+      <a href="services.html" class="btn-outline-white">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="ngwt.png" alt="New Wings Technology" class="footer-logo"/>
+      <p>Premier IT training institute in Avadi, Chennai — bridging education and industry since 2015.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="courses.html">Courses</a></li><li><a href="placement.html">Placement</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Our Services</h4><ul><li><a href="service-internship.html">Internship Programs</a></li><li><a href="service-fyp.html">Final Year Projects</a></li><li><a href="service-corporate.html">Corporate Training</a></li><li><a href="service-placement.html">Placement Support</a></li><li><a href="service-digital-marketing.html">Digital Marketing</a></li></ul></div>
+    <div class="footer-col"><h4>Get in Touch</h4>
+      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p>19/1, Kamaraj Nagar Main Road, Avadi, Chennai-600071<br/><span class="landmark">Landmark: First Floor of Apollo Pharmacy</span></p></div>
+      <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><p>09384818257</p></div>
+      <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>admin@ngwt.in</p></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="footerYear"></span> New Wings Technology. All rights reserved.</p></div>
+</footer>
+<script>
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  const hamburger = document.getElementById('hamburger');
+  const navLinksEl = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinksEl.classList.toggle('open'));
+  navLinksEl.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinksEl.classList.remove('open')));
+</script>
+</body>
+</html>
