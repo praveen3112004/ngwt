@@ -948,13 +948,14 @@
           <div><strong>Email</strong><p>admin@ngwt.in</p></div>
         </div>
       </div>
-      <form class="contact-form" onsubmit="return false;">
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="5c70f760-91b2-4850-8592-2cebbc4af8bf">
         <h3>Send Us a Message</h3>
-        <div class="form-group"><input type="text"  placeholder="Your Name" required/></div>
-        <div class="form-group"><input type="email" placeholder="Your Email" required/></div>
-        <div class="form-group"><input type="tel"   placeholder="Phone Number"/></div>
+        <div class="form-group"><input type="text"  name="name" placeholder="Your Name" required/></div>
+        <div class="form-group"><input type="email" name="email" placeholder="Your Email" required/></div>
+        <div class="form-group"><input type="tel"   name="phone" placeholder="Phone Number"/></div>
         <div class="form-group">
-          <select>
+          <select name="course">
             <option value="">Select Course</option>
             <option>AI & ML Specialization</option>
             <option>Full Stack Engineer</option>
@@ -964,7 +965,7 @@
             <option>Data Science & Analytics</option>
           </select>
         </div>
-        <div class="form-group"><textarea placeholder="Your Message" rows="4"></textarea></div>
+        <div class="form-group"><textarea name="message" placeholder="Your Message" rows="4"></textarea></div>
         <button type="submit" class="btn-submit">Send Message <i class="fas fa-paper-plane"></i></button>
       </form>
     </div>
@@ -1173,14 +1174,32 @@
     // ── CONTACT FORM ──────────────────────────────────
     document.querySelector('.contact-form').addEventListener('submit', function(e) {
       e.preventDefault()
+      
       const btn = this.querySelector('.btn-submit')
-      btn.textContent = '✓ Message Sent!'
-      btn.style.background = '#22c55e'
-      setTimeout(() => {
-        btn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>'
-        btn.style.background = ''
-        this.reset()
-      }, 3000)
+      const originalText = btn.innerHTML
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...'
+      btn.disabled = true
+
+      const formData = new FormData(this)
+      fetch(this.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        btn.innerHTML = '✓ Message Sent!'
+        btn.style.background = '#22c55e'
+        setTimeout(() => {
+          btn.innerHTML = originalText
+          btn.style.background = ''
+          btn.disabled = false
+          this.reset()
+        }, 3000)
+      })
+      .catch(error => {
+        alert("Something went wrong. Please try again or call us directly.")
+        btn.innerHTML = originalText
+        btn.disabled = false
+      })
     })
   </script>
 </body>
