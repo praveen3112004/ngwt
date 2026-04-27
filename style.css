@@ -168,8 +168,8 @@ ul { list-style: none; }
   gap: 40px;
 }
 
-.nav-logo { display: flex; align-items: center; }
-.logo-img { height: 56px; width: auto; object-fit: contain; }
+.nav-logo { display: flex; align-items: center; height: 100%; }
+.logo-img { height: 150px; width: auto; object-fit: contain; }
 
 .nav-links {
   display: flex;
@@ -708,7 +708,7 @@ ul { list-style: none; }
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.footer-brand .footer-logo { height: 56px; margin-bottom: 20px; }
+.footer-brand .footer-logo { height: 150px; margin-bottom: 20px; object-fit: contain; }
 .footer-brand p {
   font-size: 0.85rem;
   line-height: 1.75;

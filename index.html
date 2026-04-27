@@ -189,8 +189,8 @@
       height: 108px; display: flex; align-items: center; gap: 40px;
     }
 
-    .nav-logo { display: flex; align-items: center; background: #fff; padding: 4px 14px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.13); }
-    .logo-img { height: 95px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15)); }
+    .nav-logo { display: flex; align-items: center; height: 100%; }
+    .logo-img { height: 108px; width: auto; object-fit: contain; }
 
     .nav-links {
       display: flex; align-items: center; gap: 36px; margin-left: auto;
@@ -539,7 +539,7 @@
     ════════════════════════════════ */
     .footer { background: #0d1117; color: rgba(255,255,255,.75); padding: 72px 0 0; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,.08); }
-    .footer-brand .footer-logo { height: 90px; margin-bottom: 20px; }
+    .footer-brand .footer-logo { height: 150px; margin-bottom: 20px; object-fit: contain; }
     .footer-brand p { font-size: .85rem; line-height: 1.75; color: rgba(255,255,255,.55); margin-bottom: 24px; max-width: 280px; }
     .social-links { display: flex; gap: 12px; }
     .social-links a {
@@ -600,7 +600,7 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-logo">
-        <img src="ngwt.png" alt="New Wings Technology" class="logo-img"/>
+        <img src="images/ngwt.png" alt="New Wings Technology" class="logo-img"/>
       </a> 
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html"     class="nav-link active">Home</a></li>
@@ -974,7 +974,7 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="ngwt.png" alt="New Wings Technology" class="footer-logo"/>
+        <img src="images/ngwt.png" alt="New Wings Technology" class="footer-logo"/>
         <p>Founded with the vision to bridge the gap between traditional education and evolving industry needs, NEW WINGS TECHNOLOGY has been a trusted name in IT training for over 9 years.</p>
         <div class="social-links">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
