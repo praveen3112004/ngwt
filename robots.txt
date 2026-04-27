@@ -1,5 +1,5 @@
 # ================================================
-# robots.txt — New Wings Technology
+# robots.txt — NewGen Wings Technology
 # https://www.newwingstechnology.com
 # ================================================
 

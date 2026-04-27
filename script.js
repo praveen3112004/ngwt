@@ -1,5 +1,5 @@
 // ============================================
-//  NEW WINGS TECHNOLOGY - MAIN SCRIPT
+//  NEWGEN WINGS TECHNOLOGY - MAIN SCRIPT
 // ============================================
 
 // ---- NAVBAR SCROLL EFFECT ----
