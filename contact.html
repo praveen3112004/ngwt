@@ -219,7 +219,8 @@
           <h3>Send Us an <span class="highlight">Enquiry</span></h3>
           <p>Fill in the details below and we'll get back to you promptly.</p>
         </div>
-        <form id="enquiryForm" novalidate>
+        <form id="enquiryForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="5c70f760-91b2-4850-8592-2cebbc4af8bf">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">Full Name <span style="color:red">*</span></label>
@@ -353,7 +354,7 @@
   hamburger.addEventListener('click', () => navLinksEl.classList.toggle('open'));
   navLinksEl.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinksEl.classList.remove('open')));
 
-  // Form submit — show success message
+  // Form submit — send via Web3Forms and show success message
   document.getElementById('enquiryForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const fname  = document.getElementById('fname').value.trim();
@@ -363,8 +364,28 @@
       alert('Please fill in your Name, Phone, and Email before submitting.');
       return;
     }
-    this.style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
+    
+    // Change button state
+    const submitBtn = this.querySelector('.btn-submit');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+
+    // Send data in background
+    const formData = new FormData(this);
+    fetch(this.action, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      this.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    })
+    .catch(error => {
+      alert("Something went wrong. Please try again or call us directly.");
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    });
   });
 </script>
 </body>
