@@ -251,6 +251,14 @@
 
     .hero-content { position: relative; z-index: 2; max-width: 900px; }
 
+    .hero-brand-intro {
+      display: inline-block; font-size: .88rem; font-weight: 600;
+      color: var(--blue); margin-bottom: 24px; letter-spacing: 2px;
+      text-transform: uppercase; animation: fadeIn 1s ease-out;
+      background: rgba(26,157,232,0.08); padding: 8px 24px; border-radius: 100px;
+    }
+    .hero-brand-intro strong { font-weight: 800; color: var(--text); }
+
     .hero-title {
       font-size: clamp(2.4rem, 5.5vw, 4.2rem);
       font-weight: 900;
@@ -592,7 +600,19 @@
       .hero { padding: 100px 20px 40px; }
       .hero-cards { display: none; }
     }
+  
+    /* BRANDED SCROLLBAR */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1a9de8, #0a7ec0); border-radius: 10px; border: 2px solid #f1f5f9; }
+    ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #0a7ec0, #085d94); }
+    html { scrollbar-width: thin; scrollbar-color: #1a9de8 #f1f5f9; }
+
+    /* BRANDED SELECTION */
+    ::selection { background: rgba(26,157,232,0.2); color: #1a1a2e; }
+    ::-moz-selection { background: rgba(26,157,232,0.2); color: #1a1a2e; }
   </style>
+  <link rel="icon" type="image/png" href="images/ngwt_favicon_logo.png"/>
 </head>
 <body>
 
@@ -621,6 +641,9 @@
   <!-- ══════════ HERO ══════════ -->
   <section class="hero" id="home">
     <div class="hero-content">
+
+            <!-- Sub Title Brand -->
+      <div class="hero-brand-intro">Welcome to <strong>NewGen Wings Technology</strong></div>
 
       <!-- Static first line -->
       <h1 class="hero-title">Empower your career with</h1>
