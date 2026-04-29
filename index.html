@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -431,7 +431,7 @@
     /* ════════════════════════════════
        COURSES
     ════════════════════════════════ */
-    .courses { padding: 96px 0; background: #fff; }
+    .courses { padding: 96px 0; background: #fff; overflow: hidden; }
     .courses-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; gap: 24px; }
     .slider-btns { display: flex; gap: 10px; flex-shrink: 0; }
     .slider-btn {
@@ -441,8 +441,14 @@
     }
     .slider-btn:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
 
-    .courses-slider-wrap { overflow: hidden; }
-    .courses-slider { display: flex; gap: 24px; transition: transform .4s ease; }
+    .courses-slider-wrap { overflow: hidden; position: relative; margin: 0 -24px; padding: 0; width: calc(100% + 48px); }
+    .courses-slider {
+      display: flex; gap: 24px; width: max-content;
+      will-change: transform;
+      cursor: grab;
+      user-select: none;
+    }
+    .courses-slider.dragging { cursor: grabbing; }
 
     .course-card {
       min-width: 300px; background: #fff; border-radius: var(--radius);
@@ -780,10 +786,7 @@
           <h2 class="section-title">Explore Our Top <span class="highlight">Courses</span></h2>
           <p class="section-sub">Industry-relevant curriculum designed by experts to help you crack your dream job.</p>
         </div>
-        <div class="slider-btns">
-          <button class="slider-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-          <button class="slider-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
-        </div>
+
       </div>
       <div class="courses-slider-wrap">
         <div class="courses-slider" id="coursesSlider">
@@ -1142,31 +1145,105 @@
       setInterval(cycle, 3000)
     })()
 
-    // ── COURSES SLIDER ────────────────────────────────
-    const slider  = document.getElementById('coursesSlider')
-    const prevBtn = document.getElementById('prevBtn')
-    const nextBtn = document.getElementById('nextBtn')
-    const CARD_W  = 300 + 24
-    let currentIndex = 0
+    // ── INFINITE COURSE CAROUSEL ──────────────────────
+    ;(function() {
+      const slider = document.getElementById('coursesSlider');
+      if (!slider) return;
 
-    function getVisible() {
-      return window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3
-    }
-    function getTotal() {
-      return slider.querySelectorAll('.course-card').length
-    }
-    function updateSlider() {
-      const max = Math.max(0, getTotal() - getVisible())
-      currentIndex = Math.min(currentIndex, max)
-      slider.style.transform = `translateX(-${currentIndex * CARD_W}px)`
-    }
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex < Math.max(0, getTotal() - getVisible())) { currentIndex++; updateSlider() }
-    })
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) { currentIndex--; updateSlider() }
-    })
-    window.addEventListener('resize', updateSlider)
+      // Triple-duplicate cards for seamless infinite loop
+      const origCards = Array.from(slider.children);
+      for (let i = 0; i < 2; i++) {
+        origCards.forEach(card => slider.appendChild(card.cloneNode(true)));
+      }
+
+      // Measure one set width (original cards + gaps)
+      const gap = 24;
+      const cardEls = slider.querySelectorAll('.course-card');
+      const setCount = origCards.length;
+      let setWidth = 0;
+      for (let i = 0; i < setCount; i++) {
+        setWidth += cardEls[i].offsetWidth + gap;
+      }
+
+      // State
+      const SPEED = 0.8; // pixels per frame (~48px/s at 60fps)
+      let offset = 0;
+      let isDragging = false;
+      let dragStartX = 0;
+      let dragOffset = 0;
+      let rafId = null;
+
+      function render() {
+        if (!isDragging) {
+          offset -= SPEED;
+        }
+
+        // Modulo reset: when we've scrolled one full set, silently loop
+        if (offset <= -setWidth) {
+          offset += setWidth;
+        }
+        if (offset > 0) {
+          offset -= setWidth;
+        }
+
+        slider.style.transform = 'translateX(' + offset + 'px)';
+        rafId = requestAnimationFrame(render);
+      }
+
+      // Start the loop
+      rafId = requestAnimationFrame(render);
+
+      // ── Mouse drag ──
+      slider.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        isDragging = true;
+        slider.classList.add('dragging');
+        dragStartX = e.clientX;
+        dragOffset = offset;
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const dx = e.clientX - dragStartX;
+        offset = dragOffset + dx;
+      });
+
+      document.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        slider.classList.remove('dragging');
+        // Auto-scroll resumes from current position automatically (no reset)
+      });
+
+      slider.addEventListener('mouseleave', () => {
+        if (isDragging) {
+          isDragging = false;
+          slider.classList.remove('dragging');
+        }
+      });
+
+      // Prevent native image/link drag
+      slider.addEventListener('dragstart', (e) => e.preventDefault());
+
+      // ── Touch support ──
+      slider.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        slider.classList.add('dragging');
+        dragStartX = e.touches[0].clientX;
+        dragOffset = offset;
+      }, { passive: true });
+
+      slider.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const dx = e.touches[0].clientX - dragStartX;
+        offset = dragOffset + dx;
+      }, { passive: true });
+
+      slider.addEventListener('touchend', () => {
+        isDragging = false;
+        slider.classList.remove('dragging');
+      }, { passive: true });
+    })();
 
     // ── SCROLL REVEAL ─────────────────────────────────
     const revealEls = document.querySelectorAll('.service-card, .course-card, .testi-card, .placement-stat, .hero-card')
