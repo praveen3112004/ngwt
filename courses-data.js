@@ -136,3 +136,22 @@ const COURSES = [
     ]
   }
 ];
+
+/**
+ * ═══════════════════════════════════════════════════════
+ *  SERVICES DATA — Single Source of Truth
+ *  Used by: enquiry form dropdowns (index.html & contact.html)
+ *
+ *  To add a new service, just add an object below.
+ *  Both form dropdowns will update automatically.
+ * ═══════════════════════════════════════════════════════
+ */
+
+const SERVICES = [
+  { id: "internship",         title: "Internship Programs" },
+  { id: "final-year-project", title: "Final Year Projects" },
+  { id: "placement-support",  title: "Placement Support" },
+  { id: "corporate-training", title: "Corporate Training" },
+  { id: "web-development",    title: "Web Development" },
+  { id: "digital-marketing",  title: "Digital Marketing" }
+];

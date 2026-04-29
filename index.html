@@ -934,14 +934,9 @@
         <div class="form-group"><input type="email" name="email" placeholder="Your Email" required/></div>
         <div class="form-group"><input type="tel"   name="phone" placeholder="Phone Number"/></div>
         <div class="form-group">
-          <select name="course">
-            <option value="">Select Course</option>
-            <option>AI & ML Specialization</option>
-            <option>Full Stack Engineer</option>
-            <option>AWS Cloud Architect</option>
-            <option>Python Development</option>
-            <option>Cybersecurity Essentials</option>
-            <option>Data Science & Analytics</option>
+          <select name="course" id="homeCourseSelect">
+            <option value="">— Select a Course —</option>
+            <!-- Options populated dynamically from courses-data.js -->
           </select>
         </div>
         <div class="form-group"><textarea name="message" placeholder="Your Message" rows="4"></textarea></div>
@@ -1103,6 +1098,46 @@
         slider.appendChild(card);
       });
     })();
+
+    // ── DYNAMIC COURSE + SERVICE DROPDOWN (from courses-data.js) ──
+    ;(function() {
+      const sel = document.getElementById('homeCourseSelect');
+      if (!sel || typeof COURSES === 'undefined') return;
+
+      // ── Courses group ──
+      const cgr = document.createElement('optgroup');
+      cgr.label = '── Courses ──';
+      COURSES.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c.title;
+        opt.textContent = c.title;
+        cgr.appendChild(opt);
+      });
+      sel.appendChild(cgr);
+
+      // ── Services group ──
+      if (typeof SERVICES !== 'undefined') {
+        const sgr = document.createElement('optgroup');
+        sgr.label = '── Services ──';
+        SERVICES.forEach(s => {
+          const opt = document.createElement('option');
+          opt.value = s.title;
+          opt.textContent = s.title;
+          sgr.appendChild(opt);
+        });
+        sel.appendChild(sgr);
+      }
+
+      // ── Others group ──
+      const ogr = document.createElement('optgroup');
+      ogr.label = '── Others ──';
+      const other = document.createElement('option');
+      other.value = 'General Enquiry / Others';
+      other.textContent = 'General Enquiry / Others';
+      ogr.appendChild(other);
+      sel.appendChild(ogr);
+    })();
+
     // ── INFINITE COURSE CAROUSEL ──────────────────────
     ;(function() {
       const slider = document.getElementById('coursesSlider');

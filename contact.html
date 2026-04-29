@@ -253,15 +253,7 @@
             <label for="course">Course Interested In</label>
             <select id="course" name="course">
               <option value="">— Select a Course —</option>
-              <option>Full Stack Web Development</option>
-              <option>Python &amp; Data Science</option>
-              <option>AI &amp; Machine Learning</option>
-              <option>Cybersecurity</option>
-              <option>Cloud Computing (AWS / Azure)</option>
-              <option>Digital Marketing</option>
-              <option>Final Year Project Support</option>
-              <option>Corporate Training</option>
-              <option>Other / General Enquiry</option>
+              <!-- Options populated dynamically from courses-data.js -->
             </select>
           </div>
           <div class="form-group">
@@ -352,7 +344,47 @@
   <div class="footer-bottom"><p>© <span id="footerYear"></span> NewGen Wings Technology. All rights reserved.</p></div>
 </footer>
 
+<script src="courses-data.js"></script>
 <script>
+  // ── DYNAMIC COURSE + SERVICE DROPDOWN (from courses-data.js) ──
+  ;(function() {
+    const sel = document.getElementById('course');
+    if (!sel || typeof COURSES === 'undefined') return;
+
+    // ── Courses group ──
+    const cgr = document.createElement('optgroup');
+    cgr.label = '── Courses ──';
+    COURSES.forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c.title;
+      opt.textContent = c.title;
+      cgr.appendChild(opt);
+    });
+    sel.appendChild(cgr);
+
+    // ── Services group ──
+    if (typeof SERVICES !== 'undefined') {
+      const sgr = document.createElement('optgroup');
+      sgr.label = '── Services ──';
+      SERVICES.forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s.title;
+        opt.textContent = s.title;
+        sgr.appendChild(opt);
+      });
+      sel.appendChild(sgr);
+    }
+
+    // ── Others group ──
+    const ogr = document.createElement('optgroup');
+    ogr.label = '── Others ──';
+    const other = document.createElement('option');
+    other.value = 'General Enquiry / Others';
+    other.textContent = 'General Enquiry / Others';
+    ogr.appendChild(other);
+    sel.appendChild(ogr);
+  })();
+
   // Footer year
   document.getElementById('footerYear').textContent = new Date().getFullYear();
 
