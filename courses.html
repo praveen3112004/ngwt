@@ -62,6 +62,10 @@
     .course-topic i { color:var(--blue); font-size:.75rem; }
     .btn-enquire { display:flex; align-items:center; gap:8px; justify-content:center; width:100%; padding:12px; background:var(--blue); color:#fff; border:none; border-radius:8px; font-family:'Poppins',sans-serif; font-size:.9rem; font-weight:700; cursor:pointer; transition:background .2s; text-decoration:none; }
     .btn-enquire:hover { background:var(--blue-dark); }
+    /* Highlight selected course */
+    .course-card.highlighted { box-shadow: 0 0 0 3px var(--blue), var(--shadow-lg); transform: translateY(-8px); transition: box-shadow .6s ease, transform .3s; }
+    @keyframes pulseGlow { 0%,100% { box-shadow: 0 0 0 3px var(--blue), var(--shadow-lg); } 50% { box-shadow: 0 0 20px 6px rgba(26,157,232,0.3), var(--shadow-lg); } }
+    .course-card.highlighted { animation: pulseGlow 1.5s ease-in-out 3; }
 
     .cta-strip { padding:72px 0; background:linear-gradient(135deg,#0f1e3d,#0d1117); text-align:center; }
     .cta-strip h2 { font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; color:#fff; margin-bottom:12px; }
@@ -133,128 +137,8 @@
       <h2 class="section-title">Explore Our Top <span class="highlight">Certified Programs</span></h2>
       <p>Industry-relevant curriculum designed by experts to help you crack your dream job. All courses include live projects and placement support.</p>
     </div>
-    <div class="courses-grid">
-
-      <div class="course-card">
-        <div class="course-img"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=300&fit=crop" alt="AI & ML"/></div>
-        <div class="course-body">
-          <h3>AI & ML Specialization</h3>
-          <div class="course-meta">
-            <span><i class="fas fa-clock"></i> 6 Months</span>
-            <span><i class="fas fa-certificate"></i> Certified</span>
-            <span><i class="fas fa-users"></i> 20 Seats</span>
-          </div>
-          <p class="course-desc">Deep dive into machine learning, neural networks and real-world AI applications with hands-on Python projects.</p>
-          <div class="course-topics">
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Python & NumPy / Pandas</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Machine Learning Algorithms</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Deep Learning & NLP</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Capstone Project</div>
-          </div>
-          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-img"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=300&fit=crop" alt="Full Stack"/></div>
-        <div class="course-body">
-          <h3>Full Stack Engineer</h3>
-          <div class="course-meta">
-            <span><i class="fas fa-clock"></i> 4 Months</span>
-            <span><i class="fas fa-certificate"></i> Certified</span>
-            <span><i class="fas fa-users"></i> 30 Seats</span>
-          </div>
-          <p class="course-desc">Build complete web applications from front to back with React, Node.js and MongoDB. Deploy real projects.</p>
-          <div class="course-topics">
-            <div class="course-topic"><i class="fas fa-check-circle"></i> HTML, CSS, JavaScript</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> React.js</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Node.js & Express</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> MongoDB & Deployment</div>
-          </div>
-          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-img"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=300&fit=crop" alt="AWS Cloud"/></div>
-        <div class="course-body">
-          <h3>AWS Cloud Architect</h3>
-          <div class="course-meta">
-            <span><i class="fas fa-clock"></i> 3 Months</span>
-            <span><i class="fas fa-certificate"></i> Certified</span>
-            <span><i class="fas fa-users"></i> 25 Seats</span>
-          </div>
-          <p class="course-desc">Architect, deploy and manage scalable cloud solutions on AWS. Prepare for the AWS Solutions Architect exam.</p>
-          <div class="course-topics">
-            <div class="course-topic"><i class="fas fa-check-circle"></i> EC2, S3, VPC & IAM</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> RDS & DynamoDB</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Lambda & Serverless</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Certification Prep</div>
-          </div>
-          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-img"><img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600&h=300&fit=crop" alt="Python"/></div>
-        <div class="course-body">
-          <h3>Python Development</h3>
-          <div class="course-meta">
-            <span><i class="fas fa-clock"></i> 2 Months</span>
-            <span><i class="fas fa-certificate"></i> Certified</span>
-            <span><i class="fas fa-users"></i> 30 Seats</span>
-          </div>
-          <p class="course-desc">From fundamentals to advanced Python programming with real-world automation and scripting projects.</p>
-          <div class="course-topics">
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Python Fundamentals</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> OOP & File Handling</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Django Basics</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Automation Projects</div>
-          </div>
-          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-img"><img src="https://www.standleys.com/hs-fs/hubfs/AdobeStock_186885581.jpeg?width=900&name=AdobeStock_186885581.jpeg" alt="Cybersecurity"/></div>
-        <div class="course-body">
-          <h3>Cybersecurity Essentials</h3>
-          <div class="course-meta">
-            <span><i class="fas fa-clock"></i> 3 Months</span>
-            <span><i class="fas fa-certificate"></i> Certified</span>
-            <span><i class="fas fa-users"></i> 20 Seats</span>
-          </div>
-          <p class="course-desc">Master ethical hacking, network security, and vulnerability assessment with hands-on lab sessions.</p>
-          <div class="course-topics">
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Network Security</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Ethical Hacking</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> VAPT Techniques</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Security Compliance</div>
-          </div>
-          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-img"><img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=300&fit=crop" alt="Data Science"/></div>
-        <div class="course-body">
-          <h3>Data Science & Analytics</h3>
-          <div class="course-meta">
-            <span><i class="fas fa-clock"></i> 4 Months</span>
-            <span><i class="fas fa-certificate"></i> Certified</span>
-            <span><i class="fas fa-users"></i> 25 Seats</span>
-          </div>
-          <p class="course-desc">Turn data into insights using Python, SQL, Tableau and Power BI. Work on real datasets from Day 1.</p>
-          <div class="course-topics">
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Python & SQL</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Data Visualization</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Power BI & Tableau</div>
-            <div class="course-topic"><i class="fas fa-check-circle"></i> Business Analytics Project</div>
-          </div>
-          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
+    <div class="courses-grid" id="coursesGrid">
+      <!-- Cards rendered dynamically from courses-data.js -->
     </div>
   </div>
 </section>
@@ -290,7 +174,48 @@
   </div>
   <div class="footer-bottom"><p>© <span id="footerYear"></span> NewGen Wings Technology. All rights reserved.</p></div>
 </footer>
+<script src="courses-data.js"></script>
 <script>
+    // ── DYNAMIC COURSE RENDERING ──
+  ;(function() {
+    const grid = document.getElementById('coursesGrid');
+    if (!grid || typeof COURSES === 'undefined') return;
+    grid.innerHTML = '';
+    COURSES.forEach(course => {
+      const card = document.createElement('div');
+      card.className = 'course-card';
+      card.id = 'course-' + course.id;
+      card.innerHTML = `
+        <div class="course-img"><img src="${course.image}" alt="${course.title}"/></div>
+        <div class="course-body">
+          <h3>${course.title}</h3>
+          <div class="course-meta">
+            <span><i class="fas fa-clock"></i> ${course.duration}</span>
+            <span><i class="fas fa-certificate"></i> Certified</span>
+          </div>
+          <p class="course-desc">${course.description}</p>
+          <div class="course-topics">
+            ${course.topics.map(t => `<div class="course-topic"><i class="fas fa-check-circle"></i> ${t}</div>`).join('')}
+          </div>
+          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
+        </div>`;
+      grid.appendChild(card);
+    });
+
+    // URL param detection — scroll to + highlight
+    const params = new URLSearchParams(window.location.search);
+    const courseId = params.get('course');
+    if (courseId) {
+      const target = document.getElementById('course-' + courseId);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          target.classList.add('highlighted');
+        }, 400);
+      }
+    }
+  })();
+
   document.getElementById('footerYear').textContent = new Date().getFullYear();
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
