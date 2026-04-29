@@ -1199,7 +1199,7 @@
       
       if (typeof SERVICES !== 'undefined') {
         addOption('── Services ──', null, true);
-        SERVICES.forEach(s => addOption('(Service) ' + s.title, s.id));
+        SERVICES.forEach(s => addOption(s.title, s.id));
       }
 
       addOption('── Others ──', null, true);
