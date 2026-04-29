@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -246,6 +246,24 @@
       transform: translateX(-50%);
       width: 800px; height: 400px;
       background: radial-gradient(ellipse, rgba(26,157,232,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Full-screen watermark logo background */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 38%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 85%;
+      height: 85%;
+      background-image: url('images/ngwt.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.18;
+      filter: blur(3px);
+      z-index: 0;
       pointer-events: none;
     }
 
