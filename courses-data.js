@@ -148,10 +148,10 @@ const COURSES = [
  */
 
 const SERVICES = [
-  { id: "internship",         title: "Internship Programs" },
-  { id: "final-year-project", title: "Final Year Projects" },
-  { id: "placement-support",  title: "Placement Support" },
-  { id: "corporate-training", title: "Corporate Training" },
-  { id: "web-development",    title: "Web Development" },
-  { id: "digital-marketing",  title: "Digital Marketing" }
+  { id: "internship-programs",   title: "Internship Programs" },
+  { id: "final-year-projects",   title: "Final Year Projects" },
+  { id: "placement-support",     title: "Placement Support" },
+  { id: "corporate-training",    title: "Corporate Training" },
+  { id: "web-development",       title: "Web Development" },
+  { id: "digital-marketing",     title: "Digital Marketing" }
 ];

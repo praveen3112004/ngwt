@@ -197,7 +197,7 @@
           <div class="course-topics">
             ${course.topics.map(t => `<div class="course-topic"><i class="fas fa-check-circle"></i> ${t}</div>`).join('')}
           </div>
-          <a href="contact.html" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
+          <a href="contact.html?course=${course.id}" class="btn-enquire">Enquire Now <i class="fas fa-arrow-right"></i></a>
         </div>`;
       grid.appendChild(card);
     });
