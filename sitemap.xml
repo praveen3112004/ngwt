@@ -5,71 +5,102 @@
   <!-- ════════════════════════════════════════
        NewGen Wings Technology — XML Sitemap
        Submit to: https://search.google.com/search-console
-       Domain: www.newwingstechnology.com
+       Domain: ngwt.in
+       Updated: 2026-05-02
   ════════════════════════════════════════ -->
 
   <!-- HOMEPAGE -->
   <url>
-    <loc>https://www.newwingstechnology.com/</loc>
-    <lastmod>2026-04-21</lastmod>
+    <loc>https://ngwt.in/</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- ABOUT -->
+  <!-- COURSES -->
   <url>
-    <loc>https://www.newwingstechnology.com/about.html</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- SERVICES -->
-  <url>
-    <loc>https://www.newwingstechnology.com/services.html</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- COURSES (high priority — main conversion page) -->
-  <url>
-    <loc>https://www.newwingstechnology.com/courses.html</loc>
-    <lastmod>2026-04-21</lastmod>
+    <loc>https://ngwt.in/courses.html</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- SERVICES MAIN -->
+  <url>
+    <loc>https://ngwt.in/services.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- SPECIFIC SERVICES -->
+  <url>
+    <loc>https://ngwt.in/service-webdev.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ngwt.in/service-internship.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ngwt.in/service-fyp.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ngwt.in/service-placement.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ngwt.in/service-corporate.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ngwt.in/service-digital-marketing.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ABOUT -->
+  <url>
+    <loc>https://ngwt.in/about.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- PLACEMENT -->
   <url>
-    <loc>https://www.newwingstechnology.com/placement.html</loc>
-    <lastmod>2026-04-21</lastmod>
+    <loc>https://ngwt.in/placement.html</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- REVIEWS -->
   <url>
-    <loc>https://www.newwingstechnology.com/reviews.html</loc>
-    <lastmod>2026-04-21</lastmod>
+    <loc>https://ngwt.in/reviews.html</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <!-- CONTACT -->
   <url>
-    <loc>https://www.newwingstechnology.com/contact.html</loc>
-    <lastmod>2026-04-21</lastmod>
+    <loc>https://ngwt.in/contact.html</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- STUDENT PORTAL -->
-  <url>
-    <loc>https://www.newwingstechnology.com/portal.html</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
